@@ -44,7 +44,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Startposition.AutoSize = true;
-            this.lbl_Startposition.Location = new System.Drawing.Point(244, 30);
+            this.lbl_Startposition.Location = new System.Drawing.Point(118, 16);
             this.lbl_Startposition.Name = "lbl_Startposition";
             this.lbl_Startposition.Size = new System.Drawing.Size(235, 17);
             this.lbl_Startposition.TabIndex = 2;
@@ -56,7 +56,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Endstation.AutoSize = true;
-            this.lbl_Endstation.Location = new System.Drawing.Point(244, 100);
+            this.lbl_Endstation.Location = new System.Drawing.Point(118, 86);
             this.lbl_Endstation.Name = "lbl_Endstation";
             this.lbl_Endstation.Size = new System.Drawing.Size(230, 17);
             this.lbl_Endstation.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             // btn_VerbindungSuchen
             // 
-            this.btn_VerbindungSuchen.Location = new System.Drawing.Point(247, 173);
+            this.btn_VerbindungSuchen.Location = new System.Drawing.Point(121, 159);
             this.btn_VerbindungSuchen.Name = "btn_VerbindungSuchen";
             this.btn_VerbindungSuchen.Size = new System.Drawing.Size(227, 40);
             this.btn_VerbindungSuchen.TabIndex = 5;
@@ -77,7 +77,7 @@
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_close.Location = new System.Drawing.Point(692, 415);
+            this.btn_close.Location = new System.Drawing.Point(436, 227);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(96, 23);
             this.btn_close.TabIndex = 6;
@@ -89,15 +89,16 @@
             // cb_start
             // 
             this.cb_start.FormattingEnabled = true;
-            this.cb_start.Location = new System.Drawing.Point(247, 60);
+            this.cb_start.Location = new System.Drawing.Point(121, 46);
             this.cb_start.Name = "cb_start";
             this.cb_start.Size = new System.Drawing.Size(227, 24);
             this.cb_start.TabIndex = 1;
+            this.cb_start.SelectedIndexChanged += new System.EventHandler(this.cb_start_SelectedIndexChanged);
             // 
             // cb_end
             // 
             this.cb_end.FormattingEnabled = true;
-            this.cb_end.Location = new System.Drawing.Point(247, 130);
+            this.cb_end.Location = new System.Drawing.Point(121, 116);
             this.cb_end.Name = "cb_end";
             this.cb_end.Size = new System.Drawing.Size(232, 24);
             this.cb_end.TabIndex = 3;
@@ -105,21 +106,21 @@
             // 
             // btn_searchststation
             // 
-            this.btn_searchststation.Location = new System.Drawing.Point(496, 60);
+            this.btn_searchststation.Location = new System.Drawing.Point(370, 46);
             this.btn_searchststation.Name = "btn_searchststation";
             this.btn_searchststation.Size = new System.Drawing.Size(156, 24);
             this.btn_searchststation.TabIndex = 2;
-            this.btn_searchststation.Text = "Station suchen";
+            this.btn_searchststation.Text = "&Station suchen";
             this.btn_searchststation.UseVisualStyleBackColor = true;
             this.btn_searchststation.Click += new System.EventHandler(this.btn_searchststation_Click);
             // 
             // btn_searchenstation
             // 
-            this.btn_searchenstation.Location = new System.Drawing.Point(496, 129);
+            this.btn_searchenstation.Location = new System.Drawing.Point(370, 115);
             this.btn_searchenstation.Name = "btn_searchenstation";
             this.btn_searchenstation.Size = new System.Drawing.Size(156, 24);
             this.btn_searchenstation.TabIndex = 4;
-            this.btn_searchenstation.Text = "Station suchen";
+            this.btn_searchenstation.Text = "Station such&en";
             this.btn_searchenstation.UseVisualStyleBackColor = true;
             this.btn_searchenstation.Click += new System.EventHandler(this.btn_searchenstation_Click);
             // 
@@ -128,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_close;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(544, 262);
             this.Controls.Add(this.btn_searchenstation);
             this.Controls.Add(this.btn_searchststation);
             this.Controls.Add(this.cb_end);
@@ -143,6 +144,7 @@
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transport App";
+//s            this.Load += new System.EventHandler(this.Mainform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

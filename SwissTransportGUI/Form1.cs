@@ -14,24 +14,50 @@ using System.Windows.Forms;
 namespace SwissTransportGUI
 {
     public partial class Mainform : Form
-    { string test = "\n";
+    {
+        string idstartstation;
+        string idendstation;
+        string endstationname;
+        string startstationname;
+        string test = "\n";
+       
         Stations myStations = new Stations();
+        Stations myStationsstart = new Stations();
         Transport myTransport = new Transport();
         ITransport myIEtransport = new Transport();
+        Connection myConnection = new Connection();
         //Transport tr = new Transport();
+
+
+        //Die folgende Methode aktiviert typeahead
         public void typeahead(ComboBox comboboxname)
         {
-            ITransport t = new Transport();
+            Transport t = new Transport();
+
+
             if (!string.IsNullOrEmpty(comboboxname.Text))
             {
-                myStations.StationList = t.GetStations(comboboxname.Text).StationList;
-                if (myStations.StationList.Count > 0)
+                if(comboboxname == cb_end)
                 {
-                    comboboxname.DataSource = null;
-                    comboboxname.DataSource = myStations.StationList;
-                    comboboxname.DisplayMember = "Name";
-                    test = comboboxname.SelectedValue.ToString();
-              
+                    myStations.StationList = t.GetStations(comboboxname.Text).StationList;
+                    if (myStations.StationList.Count > 0)
+                    {
+                        comboboxname.DataSource = null;
+                        comboboxname.DataSource = myStations.StationList;
+                        comboboxname.DisplayMember = "Name";
+
+                    }
+                }
+               if(comboboxname == cb_start)
+                {
+                    myStationsstart.StationList = t.GetStations(comboboxname.Text).StationList;
+                    if (myStationsstart.StationList.Count > 0)
+                    {
+                        comboboxname.DataSource = null;
+                        comboboxname.DataSource = myStationsstart.StationList;
+                        comboboxname.DisplayMember = "Name";
+
+                    }
                 }
 
 
@@ -42,10 +68,6 @@ namespace SwissTransportGUI
         public Mainform()
         {
             InitializeComponent();
-
-
-
-
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -60,16 +82,48 @@ namespace SwissTransportGUI
                 MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-            {
-                
+            { 
+               
                 MessageBox.Show("Validation correct");
-                foreach(var station in myStations.StationList)
+                int i = 1;
+                int testi = 0;
+               
+                foreach (var station in myStations.StationList)
                 {
-
-                    test += " " + station.Id+"\n";
+                    if (station.Name == (cb_end.SelectedItem as Station).Name)
+                    {
+                        idendstation = station.Id;
+                        endstationname = station.Name;
+                    }
+                   
+                }
+                foreach (var station2 in myStationsstart.StationList)
+                {
+                    if (station2.Name == (cb_start.SelectedItem as Station).Name)
+                    {
+                        idstartstation = station2.Id;
+                        startstationname = station2.Name;
+                    }
                 }
 
-                MessageBox.Show(test);
+                //int ia = 1;
+                //foreach (var station in myStationsstart.StationList)
+                //{
+                //    if (ia == 1)
+                //    {
+                //        test += " " + station.Id + "\n" + station.Name;
+                //        idstartstation = Int32.Parse(station.Id);
+                //        startstationname = station.Name;
+                //        testi = cb_start.SelectedIndex;
+                //    }
+                //    ia++;
+                //}
+                MessageBox.Show(idstartstation + " " + startstationname);
+                MessageBox.Show(idendstation + " " + endstationname);
+
+             
+                
+
             }
 
         }
@@ -82,11 +136,26 @@ namespace SwissTransportGUI
         private void btn_searchenstation_Click(object sender, EventArgs e)
         {
             typeahead(cb_end);
+
         }
 
         private void cb_end_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            //if (cb_start.Text.Length > 1) {
+            //    MessageBox.Show(cb_end.Text);
+            //}
         }
+
+        private void cb_start_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if (cb_start.Text.Length > 2)
+            //{
+            //    MessageBox.Show(cb_start.Text);
+            //}
+
+        }
+
+        
     }
 }
