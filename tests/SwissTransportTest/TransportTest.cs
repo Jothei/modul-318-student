@@ -33,5 +33,13 @@ namespace SwissTransport
 
             Assert.IsNotNull(connections);
         }
+        [TestMethod]
+        public void Meggenluconncetion()
+        {
+            testee = new Transport();
+            var connections = testee.GetConnections("Luzern", "Meggen");
+
+            Assert.IsNotNull(connections);
+        }
     }
 }

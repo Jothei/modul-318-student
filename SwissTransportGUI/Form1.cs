@@ -19,7 +19,7 @@ namespace SwissTransportGUI
         string idendstation;
         string endstationname;
         string startstationname;
-        string test = "\n";
+      
        
         Stations myStations = new Stations();
         Stations myStationsstart = new Stations();
@@ -85,8 +85,7 @@ namespace SwissTransportGUI
             { 
                
                 MessageBox.Show("Validation correct");
-                int i = 1;
-                int testi = 0;
+               
                
                 foreach (var station in myStations.StationList)
                 {
@@ -106,21 +105,10 @@ namespace SwissTransportGUI
                     }
                 }
 
-                //int ia = 1;
-                //foreach (var station in myStationsstart.StationList)
-                //{
-                //    if (ia == 1)
-                //    {
-                //        test += " " + station.Id + "\n" + station.Name;
-                //        idstartstation = Int32.Parse(station.Id);
-                //        startstationname = station.Name;
-                //        testi = cb_start.SelectedIndex;
-                //    }
-                //    ia++;
-                //}
+                
                 MessageBox.Show(idstartstation + " " + startstationname);
                 MessageBox.Show(idendstation + " " + endstationname);
-
+               
              
                 
 
