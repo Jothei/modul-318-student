@@ -44,7 +44,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Startposition.AutoSize = true;
-            this.lbl_Startposition.Location = new System.Drawing.Point(244, 24);
+            this.lbl_Startposition.Location = new System.Drawing.Point(244, 30);
             this.lbl_Startposition.Name = "lbl_Startposition";
             this.lbl_Startposition.Size = new System.Drawing.Size(235, 17);
             this.lbl_Startposition.TabIndex = 2;
@@ -67,7 +67,7 @@
             this.btn_VerbindungSuchen.Location = new System.Drawing.Point(247, 173);
             this.btn_VerbindungSuchen.Name = "btn_VerbindungSuchen";
             this.btn_VerbindungSuchen.Size = new System.Drawing.Size(227, 40);
-            this.btn_VerbindungSuchen.TabIndex = 2;
+            this.btn_VerbindungSuchen.TabIndex = 5;
             this.btn_VerbindungSuchen.Text = "Verbindung suchen";
             this.btn_VerbindungSuchen.UseVisualStyleBackColor = true;
             this.btn_VerbindungSuchen.Click += new System.EventHandler(this.btn_VerbindungSuchen_Click);
@@ -80,7 +80,8 @@
             this.btn_close.Location = new System.Drawing.Point(692, 415);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(96, 23);
-            this.btn_close.TabIndex = 3;
+            this.btn_close.TabIndex = 6;
+            this.btn_close.TabStop = false;
             this.btn_close.Text = "Schliessen";
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
@@ -91,7 +92,7 @@
             this.cb_start.Location = new System.Drawing.Point(247, 60);
             this.cb_start.Name = "cb_start";
             this.cb_start.Size = new System.Drawing.Size(227, 24);
-            this.cb_start.TabIndex = 4;
+            this.cb_start.TabIndex = 1;
             // 
             // cb_end
             // 
@@ -99,14 +100,15 @@
             this.cb_end.Location = new System.Drawing.Point(247, 130);
             this.cb_end.Name = "cb_end";
             this.cb_end.Size = new System.Drawing.Size(232, 24);
-            this.cb_end.TabIndex = 5;
+            this.cb_end.TabIndex = 3;
+            this.cb_end.SelectedIndexChanged += new System.EventHandler(this.cb_end_SelectedIndexChanged);
             // 
             // btn_searchststation
             // 
             this.btn_searchststation.Location = new System.Drawing.Point(496, 60);
             this.btn_searchststation.Name = "btn_searchststation";
             this.btn_searchststation.Size = new System.Drawing.Size(156, 24);
-            this.btn_searchststation.TabIndex = 6;
+            this.btn_searchststation.TabIndex = 2;
             this.btn_searchststation.Text = "Station suchen";
             this.btn_searchststation.UseVisualStyleBackColor = true;
             this.btn_searchststation.Click += new System.EventHandler(this.btn_searchststation_Click);
@@ -116,7 +118,7 @@
             this.btn_searchenstation.Location = new System.Drawing.Point(496, 129);
             this.btn_searchenstation.Name = "btn_searchenstation";
             this.btn_searchenstation.Size = new System.Drawing.Size(156, 24);
-            this.btn_searchenstation.TabIndex = 7;
+            this.btn_searchenstation.TabIndex = 4;
             this.btn_searchenstation.Text = "Station suchen";
             this.btn_searchenstation.UseVisualStyleBackColor = true;
             this.btn_searchenstation.Click += new System.EventHandler(this.btn_searchenstation_Click);

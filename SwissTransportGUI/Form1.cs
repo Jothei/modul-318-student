@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace SwissTransportGUI
 {
     public partial class Mainform : Form
-    {
+    { string test = "\n";
         Stations myStations = new Stations();
         Transport myTransport = new Transport();
         ITransport myIEtransport = new Transport();
@@ -24,12 +24,14 @@ namespace SwissTransportGUI
             ITransport t = new Transport();
             if (!string.IsNullOrEmpty(comboboxname.Text))
             {
-                List<Station> stations = t.GetStations(comboboxname.Text).StationList;
-                if (stations.Count > 0)
+                myStations.StationList = t.GetStations(comboboxname.Text).StationList;
+                if (myStations.StationList.Count > 0)
                 {
                     comboboxname.DataSource = null;
-                    comboboxname.DataSource = stations;
+                    comboboxname.DataSource = myStations.StationList;
                     comboboxname.DisplayMember = "Name";
+                    test = comboboxname.SelectedValue.ToString();
+              
                 }
 
 
@@ -61,12 +63,13 @@ namespace SwissTransportGUI
             {
                 
                 MessageBox.Show("Validation correct");
-                //foreach (var station in myStations.StationList)
-                //{
-                //  MessageBox.Show(station.Id);
-                //}
-                
+                foreach(var station in myStations.StationList)
+                {
 
+                    test += " " + station.Id+"\n";
+                }
+
+                MessageBox.Show(test);
             }
 
         }
@@ -79,6 +82,11 @@ namespace SwissTransportGUI
         private void btn_searchenstation_Click(object sender, EventArgs e)
         {
             typeahead(cb_end);
+        }
+
+        private void cb_end_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
