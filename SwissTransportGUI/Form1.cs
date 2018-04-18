@@ -15,6 +15,9 @@ namespace SwissTransportGUI
 {
     public partial class Mainform : Form
     {
+        Stations myStations = new Stations();
+        Transport myTransport = new Transport();
+        ITransport myIEtransport = new Transport();
         //Transport tr = new Transport();
         public void typeahead(ComboBox comboboxname)
         {
@@ -28,16 +31,19 @@ namespace SwissTransportGUI
                     comboboxname.DataSource = stations;
                     comboboxname.DisplayMember = "Name";
                 }
+
+
+
             }
         }
 
         public Mainform()
         {
             InitializeComponent();
-           
 
-            
-            
+
+
+
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -47,7 +53,21 @@ namespace SwissTransportGUI
 
         private void btn_VerbindungSuchen_Click(object sender, EventArgs e)
         {
+            if (cb_start.SelectedItem == null || cb_end.SelectedItem == null)
+            {
+                MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                
+                MessageBox.Show("Validation correct");
+                //foreach (var station in myStations.StationList)
+                //{
+                //  MessageBox.Show(station.Id);
+                //}
+                
 
+            }
 
         }
 
