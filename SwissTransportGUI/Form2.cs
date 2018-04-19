@@ -54,38 +54,62 @@ namespace SwissTransportGUI
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
         {
 
-            if (cb_fahrtaffelstationauswahl.SelectedItem == null)
-            {
-                MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(cb_fahrtaffelstationauswahl.SelectedItem != null)
-            {
+            //if (cb_fahrtaffelstationauswahl.SelectedItem == null)
+            //{
+            //    MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //else if(cb_fahrtaffelstationauswahl.SelectedItem != null)
+            //{
 
-                MessageBox.Show("Validation correct");
+            //    MessageBox.Show("Validation correct");
 
 
-                foreach (var station2 in myStationsstart.StationList)
-                {
-                    if (station2.Name == (cb_fahrtaffelstationauswahl.SelectedItem as Station).Name)
-                    {
+            //    foreach (var station2 in myStationsstart.StationList)
+            //    {
+            //        if (station2.Name == (cb_fahrtaffelstationauswahl.SelectedItem as Station).Name)
+            //        {
 
-                         distance = station2.Distance.Value;
+            //             distance = station2.Distance.Value;
 
-                        MessageBox.Show(distance.ToString());
+            //            MessageBox.Show(distance.ToString());
 
-                    }
-                }
+            //        }
+            //    }
 
 
                 //MessageBox.Show(idstartstation + " " + startstationname);
                 //MessageBox.Show(idendstation + " " + endstationname);
                 Transport t = new Transport();
-                MessageBox.Show(distance.ToString());
+               // MessageBox.Show(distance.ToString());
+            dataGridView_Fahrplan.ColumnCount = 4;
+            dataGridView_Fahrplan.Columns[0].Name = "Product ID";
+            dataGridView_Fahrplan.Columns[1].Name = "Product Name";
+            dataGridView_Fahrplan.Columns[2].Name = "Product Price";
+            dataGridView_Fahrplan.Columns[3].Name = "Gleis";
 
-
-
-
+            string[] row = new string[] { "Meggen","Luzern", "Product 1", "1000" };
+            dataGridView_Fahrplan.Rows.Add(row);
+            row = new string[] { "Brunnen", "Product 2", "2000" };
+            dataGridView_Fahrplan.Rows.Add(row);
+            row = new string[] { "Arth", "Product 3", "3000" };
+            dataGridView_Fahrplan.Rows.Add(row);
+            for (int increment= 0; increment < 6; increment++){
+                row = new string[] { "Meggen", "Product "+increment.ToString(), "4000" };
+                dataGridView_Fahrplan.Rows.Add(row);
             }
+            
+
+            dataGridView_Fahrplan.Rows[0].ReadOnly = true;
+            dataGridView_Fahrplan.Rows[1].ReadOnly = true;
+            dataGridView_Fahrplan.Rows[2].ReadOnly = true;
+            dataGridView_Fahrplan.Rows[3].ReadOnly = true;
+            dataGridView_Fahrplan.Rows[4].ReadOnly = true;
+            
+
+
         }
+
+       
     }
-}
+    }
+
