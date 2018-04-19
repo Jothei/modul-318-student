@@ -15,6 +15,14 @@ namespace SwissTransport
 
             Assert.AreEqual(10, stations.StationList.Count);
         }
+        [TestMethod]
+        public void Meggenfinden()
+        {
+            testee = new Transport();
+            var stations = testee.GetStations("Meggen");
+
+            Assert.AreEqual(10, stations.StationList.Count);
+        }
 
         [TestMethod]
         public void StationBoard()

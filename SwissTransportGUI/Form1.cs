@@ -19,8 +19,8 @@ namespace SwissTransportGUI
         string idendstation;
         string endstationname;
         string startstationname;
-      
-       
+
+
         Stations myStations = new Stations();
         Stations myStationsstart = new Stations();
         Transport myTransport = new Transport();
@@ -37,7 +37,7 @@ namespace SwissTransportGUI
 
             if (!string.IsNullOrEmpty(comboboxname.Text))
             {
-                if(comboboxname == cb_end)
+                if (comboboxname == cb_end)
                 {
                     myStations.StationList = t.GetStations(comboboxname.Text).StationList;
                     if (myStations.StationList.Count > 0)
@@ -48,7 +48,30 @@ namespace SwissTransportGUI
 
                     }
                 }
-               if(comboboxname == cb_start)
+               else if (comboboxname == cb_end)
+                {
+                    myStations.StationList = t.GetStations(comboboxname.Text).StationList;
+                    if (myStations.StationList.Count > 0)
+                    {
+                        comboboxname.DataSource = null;
+                        comboboxname.DataSource = myStations.StationList;
+                        comboboxname.DisplayMember = "Name";
+
+                    }
+                }
+
+                else if (comboboxname == cb_start)
+                {
+                    myStationsstart.StationList = t.GetStations(comboboxname.Text).StationList;
+                    if (myStationsstart.StationList.Count > 0)
+                    {
+                        comboboxname.DataSource = null;
+                        comboboxname.DataSource = myStationsstart.StationList;
+                        comboboxname.DisplayMember = "Name";
+
+                    }
+                }
+                else 
                 {
                     myStationsstart.StationList = t.GetStations(comboboxname.Text).StationList;
                     if (myStationsstart.StationList.Count > 0)
@@ -65,85 +88,91 @@ namespace SwissTransportGUI
             }
         }
 
-        public Mainform()
-        {
-            InitializeComponent();
-        }
-
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btn_VerbindungSuchen_Click(object sender, EventArgs e)
-        {
-            if (cb_start.SelectedItem == null || cb_end.SelectedItem == null)
+            public Mainform()
             {
-                MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            { 
-               
-                MessageBox.Show("Validation correct");
-               
-               
-                foreach (var station in myStations.StationList)
-                {
-                    if (station.Name == (cb_end.SelectedItem as Station).Name)
-                    {
-                        idendstation = station.Id;
-                        endstationname = station.Name;
-                    }
-                   
-                }
-                foreach (var station2 in myStationsstart.StationList)
-                {
-                    if (station2.Name == (cb_start.SelectedItem as Station).Name)
-                    {
-                        idstartstation = station2.Id;
-                        startstationname = station2.Name;
-                    }
-                }
-
-                
-                MessageBox.Show(idstartstation + " " + startstationname);
-                MessageBox.Show(idendstation + " " + endstationname);
-               
-             
-                
-
+                InitializeComponent();
             }
 
+            private void btn_close_Click(object sender, EventArgs e)
+            {
+                this.Close();
+            }
+
+            private void btn_VerbindungSuchen_Click(object sender, EventArgs e)
+            {
+                if (cb_start.SelectedItem == null || cb_end.SelectedItem == null)
+                {
+                    MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    MessageBox.Show("Validation correct");
+
+
+                    foreach (var station in myStations.StationList)
+                    {
+                        if (station.Name == (cb_end.SelectedItem as Station).Name)
+                        {
+                            idendstation = station.Id;
+                            endstationname = station.Name;
+                        }
+
+                    }
+                    foreach (var station2 in myStationsstart.StationList)
+                    {
+                        if (station2.Name == (cb_start.SelectedItem as Station).Name)
+                        {
+                            idstartstation = station2.Id;
+                            startstationname = station2.Name;
+                        }
+                    }
+
+
+                    MessageBox.Show(idstartstation + " " + startstationname);
+                    MessageBox.Show(idendstation + " " + endstationname);
+
+
+
+
+                }
+
+            }
+
+            private void btn_searchststation_Click(object sender, EventArgs e)
+            {
+                typeahead(cb_start);
+            }
+
+            private void btn_searchenstation_Click(object sender, EventArgs e)
+            {
+                typeahead(cb_end);
+
+            }
+
+            private void cb_end_SelectedIndexChanged(object sender, EventArgs e)
+            {
+
+                //if (cb_start.Text.Length > 1) {
+                //    MessageBox.Show(cb_end.Text);
+                //}
+            }
+
+            private void cb_start_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                //if (cb_start.Text.Length > 2)
+                //{
+                //    MessageBox.Show(cb_start.Text);
+                //}
+
+            }
+
+            private void btn_fahrplan_Click(object sender, EventArgs e)
+            {
+
+                var form2 = new Form2();
+
+                form2.Show();
+            }
         }
-
-        private void btn_searchststation_Click(object sender, EventArgs e)
-        {
-            typeahead(cb_start);
-        }
-
-        private void btn_searchenstation_Click(object sender, EventArgs e)
-        {
-            typeahead(cb_end);
-
-        }
-
-        private void cb_end_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            //if (cb_start.Text.Length > 1) {
-            //    MessageBox.Show(cb_end.Text);
-            //}
-        }
-
-        private void cb_start_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (cb_start.Text.Length > 2)
-            //{
-            //    MessageBox.Show(cb_start.Text);
-            //}
-
-        }
-
-        
-    }
-}
+    } 

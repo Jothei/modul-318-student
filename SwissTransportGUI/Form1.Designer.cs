@@ -36,6 +36,7 @@
             this.cb_end = new System.Windows.Forms.ComboBox();
             this.btn_searchststation = new System.Windows.Forms.Button();
             this.btn_searchenstation = new System.Windows.Forms.Button();
+            this.btn_fahrplan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_Startposition
@@ -77,7 +78,7 @@
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_close.Location = new System.Drawing.Point(436, 227);
+            this.btn_close.Location = new System.Drawing.Point(436, 317);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(96, 23);
             this.btn_close.TabIndex = 6;
@@ -118,18 +119,32 @@
             // 
             this.btn_searchenstation.Location = new System.Drawing.Point(370, 115);
             this.btn_searchenstation.Name = "btn_searchenstation";
-            this.btn_searchenstation.Size = new System.Drawing.Size(156, 24);
+            this.btn_searchenstation.Size = new System.Drawing.Size(156, 25);
             this.btn_searchenstation.TabIndex = 4;
             this.btn_searchenstation.Text = "Station such&en";
             this.btn_searchenstation.UseVisualStyleBackColor = true;
             this.btn_searchenstation.Click += new System.EventHandler(this.btn_searchenstation_Click);
+            // 
+            // btn_fahrplan
+            // 
+            this.btn_fahrplan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_fahrplan.Location = new System.Drawing.Point(121, 251);
+            this.btn_fahrplan.Name = "btn_fahrplan";
+            this.btn_fahrplan.Size = new System.Drawing.Size(227, 40);
+            this.btn_fahrplan.TabIndex = 7;
+            this.btn_fahrplan.Text = "Zum Stationen Fahrplan";
+            this.btn_fahrplan.UseVisualStyleBackColor = true;
+            this.btn_fahrplan.Click += new System.EventHandler(this.btn_fahrplan_Click);
             // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_close;
-            this.ClientSize = new System.Drawing.Size(544, 262);
+            this.ClientSize = new System.Drawing.Size(544, 352);
+            this.Controls.Add(this.btn_fahrplan);
             this.Controls.Add(this.btn_searchenstation);
             this.Controls.Add(this.btn_searchststation);
             this.Controls.Add(this.cb_end);
@@ -144,7 +159,6 @@
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transport App";
-//s            this.Load += new System.EventHandler(this.Mainform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,6 +173,7 @@
         private System.Windows.Forms.ComboBox cb_end;
         private System.Windows.Forms.Button btn_searchststation;
         private System.Windows.Forms.Button btn_searchenstation;
+        private System.Windows.Forms.Button btn_fahrplan;
     }
 }
 
