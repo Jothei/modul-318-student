@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="6cbaff4e-3efb-4f31-8a5a-844924b69799" AssemblyVersion="15.0.26208.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="a48e081c-7b3f-4fbb-a642-a10f81502b07" AssemblyVersion="15.0.26208.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
   <Configuration>
     <Group Name="IE">
       <Setting Name="Version" Value="9.11.16299.0" WarningLevel="1" />
@@ -43,7 +43,7 @@
   <ExecuteActions>
     <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
       <ParameterName />
-      <Value Encoded="false">Sursee</Value>
+      <Value Encoded="false">huob</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
@@ -51,28 +51,14 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="24" Y="15" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
-      <ParameterName />
-      <Value Encoded="false">Sursee</Value>
-      <Type>String</Type>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIBittegebenSieIhreEndWindow.UIBittegebenSieIhreEndText">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="135" Y="7" />
+      <Location X="47" Y="17" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
       <ParameterName />
-      <Value Encoded="false">Leukerbad</Value>
+      <Value Encoded="false">luzern</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
@@ -80,31 +66,21 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="168" Y="88" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="168" Y="88" />
+      <Location X="228" Y="84" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
       <ParameterName />
-      <Value Encoded="false">Leukerba</Value>
+      <Value Encoded="false">Luzern</Value>
       <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
     </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="48" Y="10" />
+      <Location X="110" Y="5" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -113,48 +89,12 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="104" Y="10" />
+      <Location X="117" Y="15" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="119" Y="8" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="228" Y="201" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="228" Y="201" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UISchliessenWindow.UISchliessenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="52" Y="18" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="surseeleukerbad">
+    <TestStepMarkerAction Comment="" MarkerInformation="bahnhofhuob">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -173,22 +113,36 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="47" Y="6" />
+      <Location X="47" Y="17" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
       <ParameterName />
-      <Value Encoded="false">abb</Value>
+      <Value Encoded="false">luzern</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="30" Y="10" />
+      <Location X="228" Y="84" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">Luzern</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="110" Y="5" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -197,211 +151,7 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="146" Y="17" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="139" Y="8" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="139" Y="7" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UISchliessenWindow.UISchliessenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="47" Y="16" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod1">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
-      <ParameterName />
-      <Value Encoded="false">Huob</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="26" Y="7" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
-      <ParameterName />
-      <Value Encoded="false">obermattstrasse</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="32" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="125" Y="23" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="155" Y="18" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="154" Y="3" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="154" Y="3" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="154" Y="3" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="huobobermattstrasse">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
-      <ParameterName />
-      <Value Encoded="false">Huob</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="26" Y="7" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
-      <ParameterName />
-      <Value Encoded="false">obermattstrasse</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="32" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="125" Y="23" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="155" Y="18" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="154" Y="3" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="154" Y="3" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="154" Y="3" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UICodedUITestsdoVisualWindow.UIItemGroup.UIItemCustom">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="534" Y="120" />
+      <Location X="117" Y="15" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -416,7 +166,7 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="313" Y="58" />
+      <Location X="338" Y="59" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -425,7 +175,7 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="41" Y="12" />
+      <Location X="60" Y="9" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -436,11 +186,20 @@
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="26" Y="9" />
+      <Location X="326" Y="114" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="243" Y="88" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -454,7 +213,7 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="73" Y="24" />
+      <Location X="48" Y="19" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -463,39 +222,60 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="133" Y="9" />
+      <Location X="96" Y="20" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
+      <ParameterName />
+      <Value Encoded="false">huob</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="20" Y="7" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">bahnhof luzern</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
     <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="226" Y="197" />
+      <Location X="318" Y="82" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton">
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="141" Y="4" />
+      <Location X="39" Y="13" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="242" Y="198" />
+      <Location X="135" Y="18" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="huobobermattstrasse2">
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod1">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -504,11 +284,116 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="148" Y="33" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
+      <ParameterName />
+      <Value Encoded="false">huob</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="46" Y="3" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">obermattstrasse</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="80" Y="11" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="123" Y="26" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod2">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="148" Y="33" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
+      <ParameterName />
+      <Value Encoded="false">huob</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="46" Y="3" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">obermattstrasse</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="80" Y="11" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="123" Y="26" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
     <MouseAction UIObjectName="UIMap.UIDebugWindow.UIItemWindow.UISwissTransportGUIexeListItem.UINameEdit">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="71" Y="4" />
+      <Location X="32" Y="11" />
       <WheelDirection>0</WheelDirection>
       <ActionType>DoubleClick</ActionType>
       <MouseButton>Left</MouseButton>
@@ -523,22 +408,54 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="54" Y="6" />
+      <Location X="60" Y="4" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
       <ParameterName />
-      <Value Encoded="false">obermattstras</Value>
+      <Value Encoded="false">kappelle</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton">
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="63" Y="9" />
+      <Location X="207" Y="88" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">Masescha, Kappelle</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="118" Y="14" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod3">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="201" Y="162" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -547,12 +464,194 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="107" Y="17" />
+      <Location X="102" Y="23" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>DoubleClick</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="104" Y="25" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>DoubleClick</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="104" Y="25" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod2">
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="121" Y="22" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="121" Y="22" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="266" Y="113" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="274" Y="101" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="293" Y="113" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIDebugWindow.UIItemWindow.UIKopfzeileList.UIÄnderungsdatumSplitButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="36" Y="13" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
+      <ParameterName />
+      <Value Encoded="false">huob</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="40" Y="15" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">megg</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="222" Y="86" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="135" Y="17" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod4">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIDebugWindow.UIItemWindow.UISwissTransportGUIexeListItem.UINameEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="89" Y="13" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>DoubleClick</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_startWindow.UICb_startComboBox">
+      <ParameterName />
+      <Value Encoded="false">huob</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="77" Y="4" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">balm</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="316" Y="82" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="222" Y="85" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox">
+      <ParameterName />
+      <Value Encoded="false">Meggen, Balm</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="94" Y="13" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod5">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -569,7 +668,7 @@
       <Type>String</Type>
       <PropertyCondition>AreEqual</PropertyCondition>
     </AssertAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="ValidationCorrect">
+    <TestStepMarkerAction Comment="" MarkerInformation="valdiationcorrect">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -584,7 +683,7 @@
   <Maps>
     <UIMap Id="UIMap">
       <TopLevelWindows>
-        <TopLevelWindow ControlType="Window" Id="UITransportAppWindow" FriendlyName="Transport App" SpecialControlType="None" SessionId="131690">
+        <TopLevelWindow ControlType="Window" Id="UITransportAppWindow" FriendlyName="Transport App" SpecialControlType="None" SessionId="394284">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Transport App</WindowTitle>
@@ -660,37 +759,6 @@
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="Window" Id="UIBittegebenSieIhreEndWindow" FriendlyName="Bitte geben Sie Ihre Endstation ein:" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Transport App</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlName">lbl_Endstation</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Text" Id="UIBittegebenSieIhreEndText" FriendlyName="Bitte geben Sie Ihre Endstation ein:" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Transport App</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Bitte geben Sie Ihre Endstation ein:</PropertyCondition>
-                    <PropertyCondition Name="ControlType">Text</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
             <UIObject ControlType="Window" Id="UICb_endWindow" FriendlyName="cb_end" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
@@ -754,37 +822,6 @@
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="Window" Id="UIStationsuchenWindow1" FriendlyName="Station such&amp;en" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Transport App</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlName">btn_searchenstation</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Button" Id="UIStationsuchenButton" FriendlyName="Station such&amp;en" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Transport App</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Station suchen</PropertyCondition>
-                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
             <UIObject ControlType="Window" Id="UIVerbindungsuchenWindow" FriendlyName="Verbindung suchen" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
@@ -816,7 +853,7 @@
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="Window" Id="UIZumStationenFahrplanWindow" FriendlyName="Zum Stationen Fahrplan" SpecialControlType="None">
+            <UIObject ControlType="Window" Id="UIStationsuchenWindow1" FriendlyName="Station such&amp;en" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Transport App</WindowTitle>
@@ -825,12 +862,12 @@
                 <SearchConfiguration>VisibleOnly</SearchConfiguration>
               </SearchConfigurations>
               <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlName">btn_fahrplan</PropertyCondition>
+                <PropertyCondition Name="ControlName">btn_searchenstation</PropertyCondition>
                 <PropertyCondition Name="ControlType">Window</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Button" Id="UIZumStationenFahrplanButton" FriendlyName="Zum Stationen Fahrplan" SpecialControlType="None">
+                <UIObject ControlType="Button" Id="UIStationsuchenButton" FriendlyName="Station such&amp;en" SpecialControlType="None">
                   <TechnologyName>MSAA</TechnologyName>
                   <WindowTitles>
                     <WindowTitle>Transport App</WindowTitle>
@@ -839,85 +876,8 @@
                     <SearchConfiguration>VisibleOnly</SearchConfiguration>
                   </SearchConfigurations>
                   <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Zum Stationen Fahrplan</PropertyCondition>
+                    <PropertyCondition Name="Name">Station suchen</PropertyCondition>
                     <PropertyCondition Name="ControlType">Button</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Window" Id="UISchliessenWindow" FriendlyName="Schliessen" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Transport App</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlName">btn_close</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Button" Id="UISchliessenButton" FriendlyName="Schliessen" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Transport App</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Schliessen</PropertyCondition>
-                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UICodedUITestsdoVisualWindow" FriendlyName="Coded UI Tests do Visual Studio 2017 - YouTube - M..." SpecialControlType="None" SessionId="198534">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles>
-            <WindowTitle>Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox</WindowTitle>
-          </WindowTitles>
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox</PropertyCondition>
-            <PropertyCondition Name="ClassName">MozillaWindowClass</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
-            <UIObject ControlType="Group" Id="UIItemGroup" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlType">Group</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Custom" Id="UIItemCustom" FriendlyName="" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="ControlType">Custom</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
@@ -984,11 +944,42 @@
                     </UIObject>
                   </Descendants>
                 </UIObject>
+                <UIObject ControlType="List" Id="UIKopfzeileList" FriendlyName="Kopfzeile" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Debug</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Kopfzeile</PropertyCondition>
+                    <PropertyCondition Name="ControlType">List</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="SplitButton" Id="UIÄnderungsdatumSplitButton" FriendlyName="Änderungsdatum" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Debug</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Änderungsdatum</PropertyCondition>
+                        <PropertyCondition Name="ControlType">SplitButton</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
               </Descendants>
             </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIValidationcorrectWindow" FriendlyName="Validation correct" SpecialControlType="None" SessionId="2032614">
+        <TopLevelWindow ControlType="Window" Id="UIValidationcorrectWindow" FriendlyName="Validation correct" SpecialControlType="None" SessionId="918462">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Validation correct</WindowTitle>

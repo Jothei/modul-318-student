@@ -9,7 +9,7 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace CodedUItesting
+namespace CodedUITestProject2
 {
     using System;
     using System.CodeDom.Compiler;
@@ -31,64 +31,38 @@ namespace CodedUItesting
     {
         
         /// <summary>
-        /// surseeleukerbad - Verwenden Sie "surseeleukerbadParams", um Parameter an diese Methode zu übergeben.
+        /// bahnhofhuob - Verwenden Sie "bahnhofhuobParams", um Parameter an diese Methode zu übergeben.
         /// </summary>
-        public void surseeleukerbad()
+        public void bahnhofhuob()
         {
             #region Variable Declarations
             WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
             WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
-            WinText uIBittegebenSieIhreEndText = this.UITransportAppWindow.UIBittegebenSieIhreEndWindow.UIBittegebenSieIhreEndText;
             WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
             WinWindow uIBittegebenSieIhreStaWindow = this.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow;
-            WinButton uIStationsuchenButton1 = this.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton;
             WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
-            WinButton uIZumStationenFahrplanButton = this.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton;
-            WinClient uITransportAppClient = this.UITransportAppWindow.UITransportAppClient;
-            WinButton uISchliessenButton = this.UITransportAppWindow.UISchliessenWindow.UISchliessenButton;
             #endregion
 
-            // "Sursee" in "cb_start" Kombinationsfeld auswählen
-            uICb_startComboBox.EditableItem = this.surseeleukerbadParams.UICb_startComboBoxEditableItem;
+            // "huob" in "cb_start" Kombinationsfeld auswählen
+            uICb_startComboBox.EditableItem = this.bahnhofhuobParams.UICb_startComboBoxEditableItem;
 
             // Klicken "&Station suchen" Schaltfläche
-            Mouse.Click(uIStationsuchenButton, new Point(24, 15));
+            Mouse.Click(uIStationsuchenButton, new Point(47, 17));
 
-            // "Sursee" in "cb_start" Kombinationsfeld auswählen
-            uICb_startComboBox.SelectedItem = this.surseeleukerbadParams.UICb_startComboBoxSelectedItem;
-
-            // Klicken "Bitte geben Sie Ihre Endstation ein:" Bezeichnung
-            Mouse.Click(uIBittegebenSieIhreEndText, new Point(135, 7));
-
-            // "Leukerbad" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-            uIBittegebenSieIhreStaComboBox.EditableItem = this.surseeleukerbadParams.UIBittegebenSieIhreStaComboBoxEditableItem;
+            // "luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.EditableItem = this.bahnhofhuobParams.UIBittegebenSieIhreStaComboBoxEditableItem;
 
             // Klicken "Bitte geben Sie Ihre Startstation ein:" Fenster
-            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(168, 88));
+            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(228, 84));
 
-            // Klicken "Bitte geben Sie Ihre Startstation ein:" Fenster
-            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(168, 88));
-
-            // "Leukerba" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-            uIBittegebenSieIhreStaComboBox.EditableItem = this.surseeleukerbadParams.UIBittegebenSieIhreStaComboBoxEditableItem1;
-
-            // Klicken "Station such&en" Schaltfläche
-            Mouse.Click(uIStationsuchenButton1, new Point(48, 10));
+            // "Luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.SelectedItem = this.bahnhofhuobParams.UIBittegebenSieIhreStaComboBoxSelectedItem;
 
             // Klicken "Verbindung suchen" Schaltfläche
-            Mouse.Click(uIVerbindungsuchenButton, new Point(104, 10));
+            Mouse.Click(uIVerbindungsuchenButton, new Point(110, 5));
 
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(119, 8));
-
-            // Klicken "Transport App" Client
-            Mouse.Click(uITransportAppClient, new Point(228, 201));
-
-            // Klicken "Transport App" Client
-            Mouse.Click(uITransportAppClient, new Point(228, 201));
-
-            // Klicken "Schliessen" Schaltfläche
-            Mouse.Click(uISchliessenButton, new Point(52, 18));
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(117, 15));
         }
         
         /// <summary>
@@ -100,157 +74,77 @@ namespace CodedUItesting
             WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
             WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
             WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
-            WinButton uIStationsuchenButton1 = this.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton;
+            WinWindow uIBittegebenSieIhreStaWindow = this.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow;
             WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
-            WinButton uIZumStationenFahrplanButton = this.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton;
-            WinButton uISchliessenButton = this.UITransportAppWindow.UISchliessenWindow.UISchliessenButton;
+            WinClient uITransportAppClient = this.UITransportAppWindow.UITransportAppClient;
+            WinButton uIStationsuchenButton1 = this.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton;
             #endregion
 
             // "huob" in "cb_start" Kombinationsfeld auswählen
             uICb_startComboBox.EditableItem = this.RecordedMethod1Params.UICb_startComboBoxEditableItem;
 
             // Klicken "&Station suchen" Schaltfläche
-            Mouse.Click(uIStationsuchenButton, new Point(47, 6));
+            Mouse.Click(uIStationsuchenButton, new Point(47, 17));
 
-            // "abb" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            // "luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
             uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod1Params.UIBittegebenSieIhreStaComboBoxEditableItem;
 
-            // Klicken "Station such&en" Schaltfläche
-            Mouse.Click(uIStationsuchenButton1, new Point(30, 10));
+            // Klicken "Bitte geben Sie Ihre Startstation ein:" Fenster
+            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(228, 84));
+
+            // "Luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.SelectedItem = this.RecordedMethod1Params.UIBittegebenSieIhreStaComboBoxSelectedItem;
 
             // Klicken "Verbindung suchen" Schaltfläche
-            Mouse.Click(uIVerbindungsuchenButton, new Point(146, 17));
-
-            // Doppelklicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.DoubleClick(uIZumStationenFahrplanButton, new Point(139, 8));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(139, 7));
-
-            // Klicken "Schliessen" Schaltfläche
-            Mouse.Click(uISchliessenButton, new Point(47, 16));
-        }
-        
-        /// <summary>
-        /// huobobermattstrasse - Verwenden Sie "huobobermattstrasseParams", um Parameter an diese Methode zu übergeben.
-        /// </summary>
-        public void huobobermattstrasse()
-        {
-            #region Variable Declarations
-            WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
-            WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
-            WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
-            WinButton uIStationsuchenButton1 = this.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton;
-            WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
-            WinButton uIZumStationenFahrplanButton = this.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton;
-            #endregion
-
-            // "Huob" in "cb_start" Kombinationsfeld auswählen
-            uICb_startComboBox.EditableItem = this.huobobermattstrasseParams.UICb_startComboBoxEditableItem;
-
-            // Klicken "&Station suchen" Schaltfläche
-            Mouse.Click(uIStationsuchenButton, new Point(26, 7));
-
-            // "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-            uIBittegebenSieIhreStaComboBox.EditableItem = this.huobobermattstrasseParams.UIBittegebenSieIhreStaComboBoxEditableItem;
-
-            // Klicken "Station such&en" Schaltfläche
-            Mouse.Click(uIStationsuchenButton1, new Point(32, 14));
+            Mouse.Click(uIVerbindungsuchenButton, new Point(110, 5));
 
             // Klicken "Verbindung suchen" Schaltfläche
-            Mouse.Click(uIVerbindungsuchenButton, new Point(125, 23));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(155, 18));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(154, 3));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(154, 3));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(154, 3));
-        }
-        
-        /// <summary>
-        /// huobobermattstrasse2 - Verwenden Sie "huobobermattstrasse2Params", um Parameter an diese Methode zu übergeben.
-        /// </summary>
-        public void huobobermattstrasse2()
-        {
-            #region Variable Declarations
-            WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
-            WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
-            WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
-            WinButton uIStationsuchenButton1 = this.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton;
-            WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
-            WinButton uIZumStationenFahrplanButton = this.UITransportAppWindow.UIZumStationenFahrplanWindow.UIZumStationenFahrplanButton;
-            WinCustom uIItemCustom = this.UICodedUITestsdoVisualWindow.UIItemGroup.UIItemCustom;
-            WinClient uITransportAppClient = this.UITransportAppWindow.UITransportAppClient;
-            #endregion
-
-            // "Huob" in "cb_start" Kombinationsfeld auswählen
-            uICb_startComboBox.EditableItem = this.huobobermattstrasse2Params.UICb_startComboBoxEditableItem;
-
-            // Klicken "&Station suchen" Schaltfläche
-            Mouse.Click(uIStationsuchenButton, new Point(26, 7));
-
-            // "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-            uIBittegebenSieIhreStaComboBox.EditableItem = this.huobobermattstrasse2Params.UIBittegebenSieIhreStaComboBoxEditableItem;
-
-            // Klicken "Station such&en" Schaltfläche
-            Mouse.Click(uIStationsuchenButton1, new Point(32, 14));
-
-            // Klicken "Verbindung suchen" Schaltfläche
-            Mouse.Click(uIVerbindungsuchenButton, new Point(125, 23));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(155, 18));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(154, 3));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(154, 3));
-
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(154, 3));
-
-            // Klicken Benutzerdefiniertes Steuerelement
-            Mouse.Click(uIItemCustom, new Point(534, 120));
+            Mouse.Click(uIVerbindungsuchenButton, new Point(117, 15));
 
             // "huob" in "cb_start" Kombinationsfeld auswählen
-            uICb_startComboBox.EditableItem = this.huobobermattstrasse2Params.UICb_startComboBoxEditableItem1;
+            uICb_startComboBox.EditableItem = this.RecordedMethod1Params.UICb_startComboBoxEditableItem1;
 
             // Klicken "Transport App" Client
-            Mouse.Click(uITransportAppClient, new Point(313, 58));
+            Mouse.Click(uITransportAppClient, new Point(338, 59));
 
             // Klicken "&Station suchen" Schaltfläche
-            Mouse.Click(uIStationsuchenButton, new Point(41, 12));
+            Mouse.Click(uIStationsuchenButton, new Point(60, 9));
 
             // "kreuz" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-            uIBittegebenSieIhreStaComboBox.EditableItem = this.huobobermattstrasse2Params.UIBittegebenSieIhreStaComboBoxEditableItem1;
+            uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod1Params.UIBittegebenSieIhreStaComboBoxEditableItem1;
 
-            // Klicken "Station such&en" Schaltfläche
-            Mouse.Click(uIStationsuchenButton1, new Point(26, 9));
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(326, 114));
+
+            // Klicken "Bitte geben Sie Ihre Startstation ein:" Fenster
+            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(243, 88));
 
             // "Schaffhausen, Kreuz" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-            uIBittegebenSieIhreStaComboBox.SelectedItem = this.huobobermattstrasse2Params.UIBittegebenSieIhreStaComboBoxSelectedItem;
+            uIBittegebenSieIhreStaComboBox.SelectedItem = this.RecordedMethod1Params.UIBittegebenSieIhreStaComboBoxSelectedItem1;
 
             // Klicken "Verbindung suchen" Schaltfläche
-            Mouse.Click(uIVerbindungsuchenButton, new Point(73, 24));
+            Mouse.Click(uIVerbindungsuchenButton, new Point(48, 19));
 
             // Klicken "Verbindung suchen" Schaltfläche
-            Mouse.Click(uIVerbindungsuchenButton, new Point(133, 9));
+            Mouse.Click(uIVerbindungsuchenButton, new Point(96, 20));
+
+            // "huob" in "cb_start" Kombinationsfeld auswählen
+            uICb_startComboBox.EditableItem = this.RecordedMethod1Params.UICb_startComboBoxEditableItem2;
+
+            // Klicken "&Station suchen" Schaltfläche
+            Mouse.Click(uIStationsuchenButton, new Point(20, 7));
+
+            // "bahnhof luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod1Params.UIBittegebenSieIhreStaComboBoxEditableItem2;
 
             // Klicken "Transport App" Client
-            Mouse.Click(uITransportAppClient, new Point(226, 197));
+            Mouse.Click(uITransportAppClient, new Point(318, 82));
 
-            // Klicken "Zum Stationen Fahrplan" Schaltfläche
-            Mouse.Click(uIZumStationenFahrplanButton, new Point(141, 4));
+            // Klicken "Station such&en" Schaltfläche
+            Mouse.Click(uIStationsuchenButton1, new Point(39, 13));
 
-            // Klicken "Transport App" Client
-            Mouse.Click(uITransportAppClient, new Point(242, 198));
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(135, 18));
         }
         
         /// <summary>
@@ -259,7 +153,7 @@ namespace CodedUItesting
         public void RecordedMethod2()
         {
             #region Variable Declarations
-            WinEdit uINameEdit = this.UIDebugWindow.UIItemWindow.UISwissTransportGUIexeListItem.UINameEdit;
+            WinClient uITransportAppClient = this.UITransportAppWindow.UITransportAppClient;
             WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
             WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
             WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
@@ -267,48 +161,205 @@ namespace CodedUItesting
             WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
             #endregion
 
-            // Doppelklicken "Name" Textfeld
-            Mouse.DoubleClick(uINameEdit, new Point(71, 4));
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(148, 33));
 
             // "huob" in "cb_start" Kombinationsfeld auswählen
             uICb_startComboBox.EditableItem = this.RecordedMethod2Params.UICb_startComboBoxEditableItem;
 
             // Klicken "&Station suchen" Schaltfläche
-            Mouse.Click(uIStationsuchenButton, new Point(54, 6));
+            Mouse.Click(uIStationsuchenButton, new Point(46, 3));
 
-            // "obermattstras" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            // "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
             uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod2Params.UIBittegebenSieIhreStaComboBoxEditableItem;
 
             // Klicken "Station such&en" Schaltfläche
-            Mouse.Click(uIStationsuchenButton1, new Point(63, 9));
+            Mouse.Click(uIStationsuchenButton1, new Point(80, 11));
 
             // Klicken "Verbindung suchen" Schaltfläche
-            Mouse.Click(uIVerbindungsuchenButton, new Point(107, 17));
+            Mouse.Click(uIVerbindungsuchenButton, new Point(123, 26));
         }
         
         /// <summary>
-        /// ValidationCorrect - Verwenden Sie "ValidationCorrectExpectedValues", um Parameter an diese Methode zu übergeben.
+        /// RecordedMethod3 - Verwenden Sie "RecordedMethod3Params", um Parameter an diese Methode zu übergeben.
         /// </summary>
-        public void ValidationCorrect()
+        public void RecordedMethod3()
+        {
+            #region Variable Declarations
+            WinClient uITransportAppClient = this.UITransportAppWindow.UITransportAppClient;
+            WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
+            WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
+            WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
+            WinButton uIStationsuchenButton1 = this.UITransportAppWindow.UIStationsuchenWindow1.UIStationsuchenButton;
+            WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
+            WinEdit uINameEdit = this.UIDebugWindow.UIItemWindow.UISwissTransportGUIexeListItem.UINameEdit;
+            WinWindow uIBittegebenSieIhreStaWindow = this.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow;
+            #endregion
+
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(148, 33));
+
+            // "huob" in "cb_start" Kombinationsfeld auswählen
+            uICb_startComboBox.EditableItem = this.RecordedMethod3Params.UICb_startComboBoxEditableItem;
+
+            // Klicken "&Station suchen" Schaltfläche
+            Mouse.Click(uIStationsuchenButton, new Point(46, 3));
+
+            // "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod3Params.UIBittegebenSieIhreStaComboBoxEditableItem;
+
+            // Klicken "Station such&en" Schaltfläche
+            Mouse.Click(uIStationsuchenButton1, new Point(80, 11));
+
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(123, 26));
+
+            // Doppelklicken "Name" Textfeld
+            Mouse.DoubleClick(uINameEdit, new Point(32, 11));
+
+            // "huob" in "cb_start" Kombinationsfeld auswählen
+            uICb_startComboBox.EditableItem = this.RecordedMethod3Params.UICb_startComboBoxEditableItem1;
+
+            // Klicken "&Station suchen" Schaltfläche
+            Mouse.Click(uIStationsuchenButton, new Point(60, 4));
+
+            // "kappelle" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod3Params.UIBittegebenSieIhreStaComboBoxEditableItem1;
+
+            // Klicken "Bitte geben Sie Ihre Startstation ein:" Fenster
+            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(207, 88));
+
+            // "Masescha, Kappelle" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.SelectedItem = this.RecordedMethod3Params.UIBittegebenSieIhreStaComboBoxSelectedItem;
+
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(118, 14));
+        }
+        
+        /// <summary>
+        /// RecordedMethod4 - Verwenden Sie "RecordedMethod4Params", um Parameter an diese Methode zu übergeben.
+        /// </summary>
+        public void RecordedMethod4()
+        {
+            #region Variable Declarations
+            WinClient uITransportAppClient = this.UITransportAppWindow.UITransportAppClient;
+            WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
+            WinSplitButton uIÄnderungsdatumSplitButton = this.UIDebugWindow.UIItemWindow.UIKopfzeileList.UIÄnderungsdatumSplitButton;
+            WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
+            WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
+            WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
+            WinWindow uIBittegebenSieIhreStaWindow = this.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow;
+            #endregion
+
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(201, 162));
+
+            // Doppelklicken "Verbindung suchen" Schaltfläche
+            Mouse.DoubleClick(uIVerbindungsuchenButton, new Point(102, 23));
+
+            // Doppelklicken "Verbindung suchen" Schaltfläche
+            Mouse.DoubleClick(uIVerbindungsuchenButton, new Point(104, 25));
+
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(104, 25));
+
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(121, 22));
+
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(121, 22));
+
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(266, 113));
+
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(274, 101));
+
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(293, 113));
+
+            // Klicken "Änderungsdatum" Unterteilte Schaltfläche
+            Mouse.Click(uIÄnderungsdatumSplitButton, new Point(36, 13));
+
+            // "huob" in "cb_start" Kombinationsfeld auswählen
+            uICb_startComboBox.EditableItem = this.RecordedMethod4Params.UICb_startComboBoxEditableItem;
+
+            // Klicken "&Station suchen" Schaltfläche
+            Mouse.Click(uIStationsuchenButton, new Point(40, 15));
+
+            // "megg" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod4Params.UIBittegebenSieIhreStaComboBoxEditableItem;
+
+            // Klicken "Bitte geben Sie Ihre Startstation ein:" Fenster
+            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(222, 86));
+
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(135, 17));
+        }
+        
+        /// <summary>
+        /// RecordedMethod5 - Verwenden Sie "RecordedMethod5Params", um Parameter an diese Methode zu übergeben.
+        /// </summary>
+        public void RecordedMethod5()
+        {
+            #region Variable Declarations
+            WinEdit uINameEdit = this.UIDebugWindow.UIItemWindow.UISwissTransportGUIexeListItem.UINameEdit;
+            WinComboBox uICb_startComboBox = this.UITransportAppWindow.UICb_startWindow.UICb_startComboBox;
+            WinButton uIStationsuchenButton = this.UITransportAppWindow.UIStationsuchenWindow.UIStationsuchenButton;
+            WinComboBox uIBittegebenSieIhreStaComboBox = this.UITransportAppWindow.UICb_endWindow.UIBittegebenSieIhreStaComboBox;
+            WinClient uITransportAppClient = this.UITransportAppWindow.UITransportAppClient;
+            WinWindow uIBittegebenSieIhreStaWindow = this.UITransportAppWindow.UITransportAppClient.UIBittegebenSieIhreStaWindow;
+            WinButton uIVerbindungsuchenButton = this.UITransportAppWindow.UIVerbindungsuchenWindow.UIVerbindungsuchenButton;
+            #endregion
+
+            // Doppelklicken "Name" Textfeld
+            Mouse.DoubleClick(uINameEdit, new Point(89, 13));
+
+            // "huob" in "cb_start" Kombinationsfeld auswählen
+            uICb_startComboBox.EditableItem = this.RecordedMethod5Params.UICb_startComboBoxEditableItem;
+
+            // Klicken "&Station suchen" Schaltfläche
+            Mouse.Click(uIStationsuchenButton, new Point(77, 4));
+
+            // "balm" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.EditableItem = this.RecordedMethod5Params.UIBittegebenSieIhreStaComboBoxEditableItem;
+
+            // Klicken "Transport App" Client
+            Mouse.Click(uITransportAppClient, new Point(316, 82));
+
+            // Klicken "Bitte geben Sie Ihre Startstation ein:" Fenster
+            Mouse.Click(uIBittegebenSieIhreStaWindow, new Point(222, 85));
+
+            // "Meggen, Balm" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+            uIBittegebenSieIhreStaComboBox.SelectedItem = this.RecordedMethod5Params.UIBittegebenSieIhreStaComboBoxSelectedItem;
+
+            // Klicken "Verbindung suchen" Schaltfläche
+            Mouse.Click(uIVerbindungsuchenButton, new Point(94, 13));
+        }
+        
+        /// <summary>
+        /// valdiationcorrect - Verwenden Sie "valdiationcorrectExpectedValues", um Parameter an diese Methode zu übergeben.
+        /// </summary>
+        public void valdiationcorrect()
         {
             #region Variable Declarations
             WinText uIValidationcorrectText = this.UIValidationcorrectWindow.UIValidationcorrectText;
             #endregion
 
             // Sicherstellen, dass die Eigenschaft 'Name' von "Validation correct" Bezeichnung ist gleich 'Validation correct'
-            Assert.AreEqual(this.ValidationCorrectExpectedValues.UIValidationcorrectTextName, uIValidationcorrectText.Name);
+            Assert.AreEqual(this.valdiationcorrectExpectedValues.UIValidationcorrectTextName, uIValidationcorrectText.Name);
         }
         
         #region Properties
-        public virtual surseeleukerbadParams surseeleukerbadParams
+        public virtual bahnhofhuobParams bahnhofhuobParams
         {
             get
             {
-                if ((this.msurseeleukerbadParams == null))
+                if ((this.mbahnhofhuobParams == null))
                 {
-                    this.msurseeleukerbadParams = new surseeleukerbadParams();
+                    this.mbahnhofhuobParams = new bahnhofhuobParams();
                 }
-                return this.msurseeleukerbadParams;
+                return this.mbahnhofhuobParams;
             }
         }
         
@@ -324,30 +375,6 @@ namespace CodedUItesting
             }
         }
         
-        public virtual huobobermattstrasseParams huobobermattstrasseParams
-        {
-            get
-            {
-                if ((this.mhuobobermattstrasseParams == null))
-                {
-                    this.mhuobobermattstrasseParams = new huobobermattstrasseParams();
-                }
-                return this.mhuobobermattstrasseParams;
-            }
-        }
-        
-        public virtual huobobermattstrasse2Params huobobermattstrasse2Params
-        {
-            get
-            {
-                if ((this.mhuobobermattstrasse2Params == null))
-                {
-                    this.mhuobobermattstrasse2Params = new huobobermattstrasse2Params();
-                }
-                return this.mhuobobermattstrasse2Params;
-            }
-        }
-        
         public virtual RecordedMethod2Params RecordedMethod2Params
         {
             get
@@ -360,15 +387,51 @@ namespace CodedUItesting
             }
         }
         
-        public virtual ValidationCorrectExpectedValues ValidationCorrectExpectedValues
+        public virtual RecordedMethod3Params RecordedMethod3Params
         {
             get
             {
-                if ((this.mValidationCorrectExpectedValues == null))
+                if ((this.mRecordedMethod3Params == null))
                 {
-                    this.mValidationCorrectExpectedValues = new ValidationCorrectExpectedValues();
+                    this.mRecordedMethod3Params = new RecordedMethod3Params();
                 }
-                return this.mValidationCorrectExpectedValues;
+                return this.mRecordedMethod3Params;
+            }
+        }
+        
+        public virtual RecordedMethod4Params RecordedMethod4Params
+        {
+            get
+            {
+                if ((this.mRecordedMethod4Params == null))
+                {
+                    this.mRecordedMethod4Params = new RecordedMethod4Params();
+                }
+                return this.mRecordedMethod4Params;
+            }
+        }
+        
+        public virtual RecordedMethod5Params RecordedMethod5Params
+        {
+            get
+            {
+                if ((this.mRecordedMethod5Params == null))
+                {
+                    this.mRecordedMethod5Params = new RecordedMethod5Params();
+                }
+                return this.mRecordedMethod5Params;
+            }
+        }
+        
+        public virtual valdiationcorrectExpectedValues valdiationcorrectExpectedValues
+        {
+            get
+            {
+                if ((this.mvaldiationcorrectExpectedValues == null))
+                {
+                    this.mvaldiationcorrectExpectedValues = new valdiationcorrectExpectedValues();
+                }
+                return this.mvaldiationcorrectExpectedValues;
             }
         }
         
@@ -381,18 +444,6 @@ namespace CodedUItesting
                     this.mUITransportAppWindow = new UITransportAppWindow();
                 }
                 return this.mUITransportAppWindow;
-            }
-        }
-        
-        public UICodedUITestsdoVisualWindow UICodedUITestsdoVisualWindow
-        {
-            get
-            {
-                if ((this.mUICodedUITestsdoVisualWindow == null))
-                {
-                    this.mUICodedUITestsdoVisualWindow = new UICodedUITestsdoVisualWindow();
-                }
-                return this.mUICodedUITestsdoVisualWindow;
             }
         }
         
@@ -422,21 +473,21 @@ namespace CodedUItesting
         #endregion
         
         #region Fields
-        private surseeleukerbadParams msurseeleukerbadParams;
+        private bahnhofhuobParams mbahnhofhuobParams;
         
         private RecordedMethod1Params mRecordedMethod1Params;
         
-        private huobobermattstrasseParams mhuobobermattstrasseParams;
-        
-        private huobobermattstrasse2Params mhuobobermattstrasse2Params;
-        
         private RecordedMethod2Params mRecordedMethod2Params;
         
-        private ValidationCorrectExpectedValues mValidationCorrectExpectedValues;
+        private RecordedMethod3Params mRecordedMethod3Params;
+        
+        private RecordedMethod4Params mRecordedMethod4Params;
+        
+        private RecordedMethod5Params mRecordedMethod5Params;
+        
+        private valdiationcorrectExpectedValues mvaldiationcorrectExpectedValues;
         
         private UITransportAppWindow mUITransportAppWindow;
-        
-        private UICodedUITestsdoVisualWindow mUICodedUITestsdoVisualWindow;
         
         private UIDebugWindow mUIDebugWindow;
         
@@ -445,32 +496,27 @@ namespace CodedUItesting
     }
     
     /// <summary>
-    /// An "surseeleukerbad" zu übergebende Parameter
+    /// An "bahnhofhuob" zu übergebende Parameter
     /// </summary>
     [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class surseeleukerbadParams
+    public class bahnhofhuobParams
     {
         
         #region Fields
         /// <summary>
-        /// "Sursee" in "cb_start" Kombinationsfeld auswählen
+        /// "huob" in "cb_start" Kombinationsfeld auswählen
         /// </summary>
-        public string UICb_startComboBoxEditableItem = "Sursee";
+        public string UICb_startComboBoxEditableItem = "huob";
         
         /// <summary>
-        /// "Sursee" in "cb_start" Kombinationsfeld auswählen
+        /// "luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
         /// </summary>
-        public string UICb_startComboBoxSelectedItem = "Sursee";
+        public string UIBittegebenSieIhreStaComboBoxEditableItem = "luzern";
         
         /// <summary>
-        /// "Leukerbad" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// "Luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
         /// </summary>
-        public string UIBittegebenSieIhreStaComboBoxEditableItem = "Leukerbad";
-        
-        /// <summary>
-        /// "Leukerba" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-        /// </summary>
-        public string UIBittegebenSieIhreStaComboBoxEditableItem1 = "Leukerba";
+        public string UIBittegebenSieIhreStaComboBoxSelectedItem = "Luzern";
         #endregion
     }
     
@@ -488,49 +534,14 @@ namespace CodedUItesting
         public string UICb_startComboBoxEditableItem = "huob";
         
         /// <summary>
-        /// "abb" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// "luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
         /// </summary>
-        public string UIBittegebenSieIhreStaComboBoxEditableItem = "abb";
-        #endregion
-    }
-    
-    /// <summary>
-    /// An "huobobermattstrasse" zu übergebende Parameter
-    /// </summary>
-    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class huobobermattstrasseParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// "Huob" in "cb_start" Kombinationsfeld auswählen
-        /// </summary>
-        public string UICb_startComboBoxEditableItem = "Huob";
+        public string UIBittegebenSieIhreStaComboBoxEditableItem = "luzern";
         
         /// <summary>
-        /// "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// "Luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
         /// </summary>
-        public string UIBittegebenSieIhreStaComboBoxEditableItem = "obermattstrasse";
-        #endregion
-    }
-    
-    /// <summary>
-    /// An "huobobermattstrasse2" zu übergebende Parameter
-    /// </summary>
-    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class huobobermattstrasse2Params
-    {
-        
-        #region Fields
-        /// <summary>
-        /// "Huob" in "cb_start" Kombinationsfeld auswählen
-        /// </summary>
-        public string UICb_startComboBoxEditableItem = "Huob";
-        
-        /// <summary>
-        /// "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
-        /// </summary>
-        public string UIBittegebenSieIhreStaComboBoxEditableItem = "obermattstrasse";
+        public string UIBittegebenSieIhreStaComboBoxSelectedItem = "Luzern";
         
         /// <summary>
         /// "huob" in "cb_start" Kombinationsfeld auswählen
@@ -545,7 +556,17 @@ namespace CodedUItesting
         /// <summary>
         /// "Schaffhausen, Kreuz" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
         /// </summary>
-        public string UIBittegebenSieIhreStaComboBoxSelectedItem = "Schaffhausen, Kreuz";
+        public string UIBittegebenSieIhreStaComboBoxSelectedItem1 = "Schaffhausen, Kreuz";
+        
+        /// <summary>
+        /// "huob" in "cb_start" Kombinationsfeld auswählen
+        /// </summary>
+        public string UICb_startComboBoxEditableItem2 = "huob";
+        
+        /// <summary>
+        /// "bahnhof luzern" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// </summary>
+        public string UIBittegebenSieIhreStaComboBoxEditableItem2 = "bahnhof luzern";
         #endregion
     }
     
@@ -563,17 +584,97 @@ namespace CodedUItesting
         public string UICb_startComboBoxEditableItem = "huob";
         
         /// <summary>
-        /// "obermattstras" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
         /// </summary>
-        public string UIBittegebenSieIhreStaComboBoxEditableItem = "obermattstras";
+        public string UIBittegebenSieIhreStaComboBoxEditableItem = "obermattstrasse";
         #endregion
     }
     
     /// <summary>
-    /// An "ValidationCorrect" zu übergebende Parameter
+    /// An "RecordedMethod3" zu übergebende Parameter
     /// </summary>
     [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class ValidationCorrectExpectedValues
+    public class RecordedMethod3Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// "huob" in "cb_start" Kombinationsfeld auswählen
+        /// </summary>
+        public string UICb_startComboBoxEditableItem = "huob";
+        
+        /// <summary>
+        /// "obermattstrasse" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// </summary>
+        public string UIBittegebenSieIhreStaComboBoxEditableItem = "obermattstrasse";
+        
+        /// <summary>
+        /// "huob" in "cb_start" Kombinationsfeld auswählen
+        /// </summary>
+        public string UICb_startComboBoxEditableItem1 = "huob";
+        
+        /// <summary>
+        /// "kappelle" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// </summary>
+        public string UIBittegebenSieIhreStaComboBoxEditableItem1 = "kappelle";
+        
+        /// <summary>
+        /// "Masescha, Kappelle" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// </summary>
+        public string UIBittegebenSieIhreStaComboBoxSelectedItem = "Masescha, Kappelle";
+        #endregion
+    }
+    
+    /// <summary>
+    /// An "RecordedMethod4" zu übergebende Parameter
+    /// </summary>
+    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
+    public class RecordedMethod4Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// "huob" in "cb_start" Kombinationsfeld auswählen
+        /// </summary>
+        public string UICb_startComboBoxEditableItem = "huob";
+        
+        /// <summary>
+        /// "megg" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// </summary>
+        public string UIBittegebenSieIhreStaComboBoxEditableItem = "megg";
+        #endregion
+    }
+    
+    /// <summary>
+    /// An "RecordedMethod5" zu übergebende Parameter
+    /// </summary>
+    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
+    public class RecordedMethod5Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// "huob" in "cb_start" Kombinationsfeld auswählen
+        /// </summary>
+        public string UICb_startComboBoxEditableItem = "huob";
+        
+        /// <summary>
+        /// "balm" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// </summary>
+        public string UIBittegebenSieIhreStaComboBoxEditableItem = "balm";
+        
+        /// <summary>
+        /// "Meggen, Balm" in "Bitte geben Sie Ihre Startstation ein:" Kombinationsfeld auswählen
+        /// </summary>
+        public string UIBittegebenSieIhreStaComboBoxSelectedItem = "Meggen, Balm";
+        #endregion
+    }
+    
+    /// <summary>
+    /// An "valdiationcorrect" zu übergebende Parameter
+    /// </summary>
+    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
+    public class valdiationcorrectExpectedValues
     {
         
         #region Fields
@@ -622,18 +723,6 @@ namespace CodedUItesting
             }
         }
         
-        public UIBittegebenSieIhreEndWindow UIBittegebenSieIhreEndWindow
-        {
-            get
-            {
-                if ((this.mUIBittegebenSieIhreEndWindow == null))
-                {
-                    this.mUIBittegebenSieIhreEndWindow = new UIBittegebenSieIhreEndWindow(this);
-                }
-                return this.mUIBittegebenSieIhreEndWindow;
-            }
-        }
-        
         public UICb_endWindow UICb_endWindow
         {
             get
@@ -658,18 +747,6 @@ namespace CodedUItesting
             }
         }
         
-        public UIStationsuchenWindow1 UIStationsuchenWindow1
-        {
-            get
-            {
-                if ((this.mUIStationsuchenWindow1 == null))
-                {
-                    this.mUIStationsuchenWindow1 = new UIStationsuchenWindow1(this);
-                }
-                return this.mUIStationsuchenWindow1;
-            }
-        }
-        
         public UIVerbindungsuchenWindow UIVerbindungsuchenWindow
         {
             get
@@ -682,27 +759,15 @@ namespace CodedUItesting
             }
         }
         
-        public UIZumStationenFahrplanWindow UIZumStationenFahrplanWindow
+        public UIStationsuchenWindow1 UIStationsuchenWindow1
         {
             get
             {
-                if ((this.mUIZumStationenFahrplanWindow == null))
+                if ((this.mUIStationsuchenWindow1 == null))
                 {
-                    this.mUIZumStationenFahrplanWindow = new UIZumStationenFahrplanWindow(this);
+                    this.mUIStationsuchenWindow1 = new UIStationsuchenWindow1(this);
                 }
-                return this.mUIZumStationenFahrplanWindow;
-            }
-        }
-        
-        public UISchliessenWindow UISchliessenWindow
-        {
-            get
-            {
-                if ((this.mUISchliessenWindow == null))
-                {
-                    this.mUISchliessenWindow = new UISchliessenWindow(this);
-                }
-                return this.mUISchliessenWindow;
+                return this.mUIStationsuchenWindow1;
             }
         }
         #endregion
@@ -712,19 +777,13 @@ namespace CodedUItesting
         
         private UIStationsuchenWindow mUIStationsuchenWindow;
         
-        private UIBittegebenSieIhreEndWindow mUIBittegebenSieIhreEndWindow;
-        
         private UICb_endWindow mUICb_endWindow;
         
         private UITransportAppClient mUITransportAppClient;
         
-        private UIStationsuchenWindow1 mUIStationsuchenWindow1;
-        
         private UIVerbindungsuchenWindow mUIVerbindungsuchenWindow;
         
-        private UIZumStationenFahrplanWindow mUIZumStationenFahrplanWindow;
-        
-        private UISchliessenWindow mUISchliessenWindow;
+        private UIStationsuchenWindow1 mUIStationsuchenWindow1;
         #endregion
     }
     
@@ -796,42 +855,6 @@ namespace CodedUItesting
         
         #region Fields
         private WinButton mUIStationsuchenButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class UIBittegebenSieIhreEndWindow : WinWindow
-    {
-        
-        public UIBittegebenSieIhreEndWindow(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Suchkriterien
-            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "lbl_Endstation";
-            this.WindowTitles.Add("Transport App");
-            #endregion
-        }
-        
-        #region Properties
-        public WinText UIBittegebenSieIhreEndText
-        {
-            get
-            {
-                if ((this.mUIBittegebenSieIhreEndText == null))
-                {
-                    this.mUIBittegebenSieIhreEndText = new WinText(this);
-                    #region Suchkriterien
-                    this.mUIBittegebenSieIhreEndText.SearchProperties[WinText.PropertyNames.Name] = "Bitte geben Sie Ihre Endstation ein:";
-                    this.mUIBittegebenSieIhreEndText.WindowTitles.Add("Transport App");
-                    #endregion
-                }
-                return this.mUIBittegebenSieIhreEndText;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinText mUIBittegebenSieIhreEndText;
         #endregion
     }
     
@@ -909,42 +932,6 @@ namespace CodedUItesting
     }
     
     [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class UIStationsuchenWindow1 : WinWindow
-    {
-        
-        public UIStationsuchenWindow1(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Suchkriterien
-            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "btn_searchenstation";
-            this.WindowTitles.Add("Transport App");
-            #endregion
-        }
-        
-        #region Properties
-        public WinButton UIStationsuchenButton
-        {
-            get
-            {
-                if ((this.mUIStationsuchenButton == null))
-                {
-                    this.mUIStationsuchenButton = new WinButton(this);
-                    #region Suchkriterien
-                    this.mUIStationsuchenButton.SearchProperties[WinButton.PropertyNames.Name] = "Station suchen";
-                    this.mUIStationsuchenButton.WindowTitles.Add("Transport App");
-                    #endregion
-                }
-                return this.mUIStationsuchenButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinButton mUIStationsuchenButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
     public class UIVerbindungsuchenWindow : WinWindow
     {
         
@@ -981,140 +968,38 @@ namespace CodedUItesting
     }
     
     [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class UIZumStationenFahrplanWindow : WinWindow
+    public class UIStationsuchenWindow1 : WinWindow
     {
         
-        public UIZumStationenFahrplanWindow(UITestControl searchLimitContainer) : 
+        public UIStationsuchenWindow1(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Suchkriterien
-            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "btn_fahrplan";
+            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "btn_searchenstation";
             this.WindowTitles.Add("Transport App");
             #endregion
         }
         
         #region Properties
-        public WinButton UIZumStationenFahrplanButton
+        public WinButton UIStationsuchenButton
         {
             get
             {
-                if ((this.mUIZumStationenFahrplanButton == null))
+                if ((this.mUIStationsuchenButton == null))
                 {
-                    this.mUIZumStationenFahrplanButton = new WinButton(this);
+                    this.mUIStationsuchenButton = new WinButton(this);
                     #region Suchkriterien
-                    this.mUIZumStationenFahrplanButton.SearchProperties[WinButton.PropertyNames.Name] = "Zum Stationen Fahrplan";
-                    this.mUIZumStationenFahrplanButton.WindowTitles.Add("Transport App");
+                    this.mUIStationsuchenButton.SearchProperties[WinButton.PropertyNames.Name] = "Station suchen";
+                    this.mUIStationsuchenButton.WindowTitles.Add("Transport App");
                     #endregion
                 }
-                return this.mUIZumStationenFahrplanButton;
+                return this.mUIStationsuchenButton;
             }
         }
         #endregion
         
         #region Fields
-        private WinButton mUIZumStationenFahrplanButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class UISchliessenWindow : WinWindow
-    {
-        
-        public UISchliessenWindow(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Suchkriterien
-            this.SearchProperties[WinWindow.PropertyNames.ControlName] = "btn_close";
-            this.WindowTitles.Add("Transport App");
-            #endregion
-        }
-        
-        #region Properties
-        public WinButton UISchliessenButton
-        {
-            get
-            {
-                if ((this.mUISchliessenButton == null))
-                {
-                    this.mUISchliessenButton = new WinButton(this);
-                    #region Suchkriterien
-                    this.mUISchliessenButton.SearchProperties[WinButton.PropertyNames.Name] = "Schliessen";
-                    this.mUISchliessenButton.WindowTitles.Add("Transport App");
-                    #endregion
-                }
-                return this.mUISchliessenButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinButton mUISchliessenButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class UICodedUITestsdoVisualWindow : WinWindow
-    {
-        
-        public UICodedUITestsdoVisualWindow()
-        {
-            #region Suchkriterien
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "MozillaWindowClass";
-            this.WindowTitles.Add("Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox");
-            #endregion
-        }
-        
-        #region Properties
-        public UIItemGroup UIItemGroup
-        {
-            get
-            {
-                if ((this.mUIItemGroup == null))
-                {
-                    this.mUIItemGroup = new UIItemGroup(this);
-                }
-                return this.mUIItemGroup;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIItemGroup mUIItemGroup;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
-    public class UIItemGroup : WinGroup
-    {
-        
-        public UIItemGroup(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Suchkriterien
-            this.WindowTitles.Add("Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox");
-            #endregion
-        }
-        
-        #region Properties
-        public WinCustom UIItemCustom
-        {
-            get
-            {
-                if ((this.mUIItemCustom == null))
-                {
-                    this.mUIItemCustom = new WinCustom(this);
-                    #region Suchkriterien
-                    this.mUIItemCustom.WindowTitles.Add("Coded UI Tests do Visual Studio 2017 - YouTube - Mozilla Firefox");
-                    #endregion
-                }
-                return this.mUIItemCustom;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinCustom mUIItemCustom;
+        private WinButton mUIStationsuchenButton;
         #endregion
     }
     
@@ -1176,10 +1061,24 @@ namespace CodedUItesting
                 return this.mUISwissTransportGUIexeListItem;
             }
         }
+        
+        public UIKopfzeileList UIKopfzeileList
+        {
+            get
+            {
+                if ((this.mUIKopfzeileList == null))
+                {
+                    this.mUIKopfzeileList = new UIKopfzeileList(this);
+                }
+                return this.mUIKopfzeileList;
+            }
+        }
         #endregion
         
         #region Fields
         private UISwissTransportGUIexeListItem mUISwissTransportGUIexeListItem;
+        
+        private UIKopfzeileList mUIKopfzeileList;
         #endregion
     }
     
@@ -1216,6 +1115,42 @@ namespace CodedUItesting
         
         #region Fields
         private WinEdit mUINameEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UI-Test-Generator", "15.0.26208.0")]
+    public class UIKopfzeileList : WinList
+    {
+        
+        public UIKopfzeileList(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Suchkriterien
+            this.SearchProperties[WinList.PropertyNames.Name] = "Kopfzeile";
+            this.WindowTitles.Add("Debug");
+            #endregion
+        }
+        
+        #region Properties
+        public WinSplitButton UIÄnderungsdatumSplitButton
+        {
+            get
+            {
+                if ((this.mUIÄnderungsdatumSplitButton == null))
+                {
+                    this.mUIÄnderungsdatumSplitButton = new WinSplitButton(this);
+                    #region Suchkriterien
+                    this.mUIÄnderungsdatumSplitButton.SearchProperties[WinButton.PropertyNames.Name] = "Änderungsdatum";
+                    this.mUIÄnderungsdatumSplitButton.WindowTitles.Add("Debug");
+                    #endregion
+                }
+                return this.mUIÄnderungsdatumSplitButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinSplitButton mUIÄnderungsdatumSplitButton;
         #endregion
     }
     

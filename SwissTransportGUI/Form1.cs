@@ -83,7 +83,7 @@ namespace SwissTransportGUI
                     }
                 }
 
-
+                
 
             }
         }
@@ -91,6 +91,7 @@ namespace SwissTransportGUI
             public Mainform()
             {
                 InitializeComponent();
+            
             }
 
             private void btn_close_Click(object sender, EventArgs e)
@@ -132,9 +133,30 @@ namespace SwissTransportGUI
                     MessageBox.Show(idstartstation + " " + startstationname);
                     MessageBox.Show(idendstation + " " + endstationname);
 
+                    Connections connections = null;
 
+                    if(dtp_datum_verbindung.Checked == true && dtp_time_verbindung.Checked == true)
+                    {
+                        DateTime dateTime = dtp_datum_verbindung.Value;
+                        dateTime = dateTime.AddHours(dtp_time_verbindung.Value.Hour);
+                        dateTime = dateTime.AddMinutes(dtp_time_verbindung.Value.Minute);
 
+                        connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, dateTime);
+                    }
+                    else
+                    {
+                        connections = myTransport.GetConnections(startstationname, endstationname);
+                    }
 
+                    foreach (Connection connection in connections.ConnectionList)
+                    {
+                        String departureString = connection.From.Departure;
+                        DateTime departureDateTime = DateTime.Parse(departureString);
+                        String departureFormatted = departureDateTime.ToString("HH:mm:ss dd.MM.yyyy");
+
+                        MessageBox.Show("Departure: " + departureFormatted);
+                    }
+                    
                 }
 
             }
@@ -174,5 +196,10 @@ namespace SwissTransportGUI
 
                 form2.Show();
             }
+
+        private void cb_start_TextChanged(object sender, EventArgs e)
+        {
+            
         }
+    }
     } 

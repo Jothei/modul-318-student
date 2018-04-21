@@ -32,11 +32,11 @@
             this.cb_fahrtaffelstationauswahl = new System.Windows.Forms.ComboBox();
             this.btn_searchstation = new System.Windows.Forms.Button();
             this.dataGridView_Fahrplan = new System.Windows.Forms.DataGridView();
-            this.btn_calcVerbindungen = new System.Windows.Forms.Button();
             this.Startstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zielstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_calcVerbindungen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fahrplan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,21 +81,11 @@
             this.Zielstation,
             this.Zeit,
             this.Gleis});
-            this.dataGridView_Fahrplan.Location = new System.Drawing.Point(192, 109);
+            this.dataGridView_Fahrplan.Location = new System.Drawing.Point(179, 130);
             this.dataGridView_Fahrplan.Name = "dataGridView_Fahrplan";
             this.dataGridView_Fahrplan.RowTemplate.Height = 24;
             this.dataGridView_Fahrplan.Size = new System.Drawing.Size(466, 258);
             this.dataGridView_Fahrplan.TabIndex = 3;
-            // 
-            // btn_calcVerbindungen
-            // 
-            this.btn_calcVerbindungen.Location = new System.Drawing.Point(272, 73);
-            this.btn_calcVerbindungen.Name = "btn_calcVerbindungen";
-            this.btn_calcVerbindungen.Size = new System.Drawing.Size(146, 30);
-            this.btn_calcVerbindungen.TabIndex = 4;
-            this.btn_calcVerbindungen.Text = "Verbindungen anzeigen";
-            this.btn_calcVerbindungen.UseVisualStyleBackColor = true;
-            this.btn_calcVerbindungen.Click += new System.EventHandler(this.btn_calcVerbindungen_Click);
             // 
             // Startstation
             // 
@@ -116,6 +106,16 @@
             // 
             this.Gleis.HeaderText = "Gleis";
             this.Gleis.Name = "Gleis";
+            // 
+            // btn_calcVerbindungen
+            // 
+            this.btn_calcVerbindungen.Location = new System.Drawing.Point(272, 73);
+            this.btn_calcVerbindungen.Name = "btn_calcVerbindungen";
+            this.btn_calcVerbindungen.Size = new System.Drawing.Size(146, 30);
+            this.btn_calcVerbindungen.TabIndex = 4;
+            this.btn_calcVerbindungen.Text = "Verbindungen anzeigen";
+            this.btn_calcVerbindungen.UseVisualStyleBackColor = true;
+            this.btn_calcVerbindungen.Click += new System.EventHandler(this.btn_calcVerbindungen_Click);
             // 
             // Form2
             // 

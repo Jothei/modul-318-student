@@ -37,6 +37,10 @@
             this.btn_searchststation = new System.Windows.Forms.Button();
             this.btn_searchenstation = new System.Windows.Forms.Button();
             this.btn_fahrplan = new System.Windows.Forms.Button();
+            this.dgV_Verbindungen = new System.Windows.Forms.DataGridView();
+            this.dtp_datum_verbindung = new System.Windows.Forms.DateTimePicker();
+            this.dtp_time_verbindung = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Verbindungen)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Startposition
@@ -65,9 +69,9 @@
             // 
             // btn_VerbindungSuchen
             // 
-            this.btn_VerbindungSuchen.Location = new System.Drawing.Point(121, 159);
+            this.btn_VerbindungSuchen.Location = new System.Drawing.Point(121, 242);
             this.btn_VerbindungSuchen.Name = "btn_VerbindungSuchen";
-            this.btn_VerbindungSuchen.Size = new System.Drawing.Size(227, 40);
+            this.btn_VerbindungSuchen.Size = new System.Drawing.Size(232, 40);
             this.btn_VerbindungSuchen.TabIndex = 5;
             this.btn_VerbindungSuchen.Text = "Verbindung suchen";
             this.btn_VerbindungSuchen.UseVisualStyleBackColor = true;
@@ -78,7 +82,7 @@
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_close.Location = new System.Drawing.Point(436, 317);
+            this.btn_close.Location = new System.Drawing.Point(514, 593);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(96, 23);
             this.btn_close.TabIndex = 6;
@@ -89,12 +93,15 @@
             // 
             // cb_start
             // 
+            this.cb_start.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cb_start.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_start.FormattingEnabled = true;
             this.cb_start.Location = new System.Drawing.Point(121, 46);
             this.cb_start.Name = "cb_start";
             this.cb_start.Size = new System.Drawing.Size(227, 24);
             this.cb_start.TabIndex = 1;
             this.cb_start.SelectedIndexChanged += new System.EventHandler(this.cb_start_SelectedIndexChanged);
+            this.cb_start.TextChanged += new System.EventHandler(this.cb_start_TextChanged);
             // 
             // cb_end
             // 
@@ -127,23 +134,52 @@
             // 
             // btn_fahrplan
             // 
-            this.btn_fahrplan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_fahrplan.Location = new System.Drawing.Point(121, 251);
+            this.btn_fahrplan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_fahrplan.Location = new System.Drawing.Point(101, 513);
             this.btn_fahrplan.Name = "btn_fahrplan";
-            this.btn_fahrplan.Size = new System.Drawing.Size(227, 40);
+            this.btn_fahrplan.Size = new System.Drawing.Size(295, 50);
             this.btn_fahrplan.TabIndex = 7;
             this.btn_fahrplan.Text = "Zum Stationen Fahrplan";
             this.btn_fahrplan.UseVisualStyleBackColor = true;
             this.btn_fahrplan.Click += new System.EventHandler(this.btn_fahrplan_Click);
+            // 
+            // dgV_Verbindungen
+            // 
+            this.dgV_Verbindungen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_Verbindungen.Location = new System.Drawing.Point(101, 298);
+            this.dgV_Verbindungen.Name = "dgV_Verbindungen";
+            this.dgV_Verbindungen.RowTemplate.Height = 24;
+            this.dgV_Verbindungen.Size = new System.Drawing.Size(373, 189);
+            this.dgV_Verbindungen.TabIndex = 8;
+            // 
+            // dtp_datum_verbindung
+            // 
+            this.dtp_datum_verbindung.Checked = false;
+            this.dtp_datum_verbindung.Location = new System.Drawing.Point(121, 175);
+            this.dtp_datum_verbindung.Name = "dtp_datum_verbindung";
+            this.dtp_datum_verbindung.ShowCheckBox = true;
+            this.dtp_datum_verbindung.Size = new System.Drawing.Size(232, 22);
+            this.dtp_datum_verbindung.TabIndex = 9;
+            // 
+            // dtp_time_verbindung
+            // 
+            this.dtp_time_verbindung.Checked = false;
+            this.dtp_time_verbindung.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtp_time_verbindung.Location = new System.Drawing.Point(121, 204);
+            this.dtp_time_verbindung.Name = "dtp_time_verbindung";
+            this.dtp_time_verbindung.ShowCheckBox = true;
+            this.dtp_time_verbindung.Size = new System.Drawing.Size(232, 22);
+            this.dtp_time_verbindung.TabIndex = 10;
             // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_close;
-            this.ClientSize = new System.Drawing.Size(544, 352);
+            this.ClientSize = new System.Drawing.Size(622, 628);
+            this.Controls.Add(this.dtp_time_verbindung);
+            this.Controls.Add(this.dtp_datum_verbindung);
+            this.Controls.Add(this.dgV_Verbindungen);
             this.Controls.Add(this.btn_fahrplan);
             this.Controls.Add(this.btn_searchenstation);
             this.Controls.Add(this.btn_searchststation);
@@ -159,6 +195,7 @@
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transport App";
+            ((System.ComponentModel.ISupportInitialize)(this.dgV_Verbindungen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +211,9 @@
         private System.Windows.Forms.Button btn_searchststation;
         private System.Windows.Forms.Button btn_searchenstation;
         private System.Windows.Forms.Button btn_fahrplan;
+        private System.Windows.Forms.DataGridView dgV_Verbindungen;
+        private System.Windows.Forms.DateTimePicker dtp_datum_verbindung;
+        private System.Windows.Forms.DateTimePicker dtp_time_verbindung;
     }
 }
 
