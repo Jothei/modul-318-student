@@ -53,68 +53,54 @@ namespace SwissTransportGUI
 
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
         {
-            string station = cb_fahrtaffelstationauswahl.Text;
+            if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text))
+                {
+                dataGridView_Fahrplan.Rows.Clear();
+                dataGridView_Fahrplan.Refresh();
+                string station = cb_fahrtaffelstationauswahl.Text;
 
-            //if (cb_fahrtaffelstationauswahl.SelectedItem == null)
-            //{
-            //    MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else if(cb_fahrtaffelstationauswahl.SelectedItem != null)
-            //{
-
-            //    MessageBox.Show("Validation correct");
-
-
-            //    foreach (var station2 in myStationsstart.StationList)
-            //    {
-            //        if (station2.Name == (cb_fahrtaffelstationauswahl.SelectedItem as Station).Name)
-            //        {
-
-            //             distance = station2.Distance.Value;
-
-            //            MessageBox.Show(distance.ToString());
-
-            //        }
-            //    }
-
-
-            //    //MessageBox.Show(idstartstation + " " + startstationname);
-            //    //MessageBox.Show(idendstation + " " + endstationname);
-            //    Transport t = new Transport();
-            //   // MessageBox.Show(distance.ToString());
-            //dataGridView_Fahrplan.ColumnCount = 4;
-            //dataGridView_Fahrplan.Columns[0].Name = "Product ID";
-            //dataGridView_Fahrplan.Columns[1].Name = "Product Name";
-            //dataGridView_Fahrplan.Columns[2].Name = "Product Price";
-            //dataGridView_Fahrplan.Columns[3].Name = "Gleis";
-
-            //string[] row = new string[] { "Meggen","Luzern", "Product 1", "1000" };
-            //dataGridView_Fahrplan.Rows.Add(row);
-            //row = new string[] { "Brunnen", "Product 2", "2000" };
-            //dataGridView_Fahrplan.Rows.Add(row);
-            //row = new string[] { "Arth", "Product 3", "3000" };
-            //dataGridView_Fahrplan.Rows.Add(row);
-            //for (int increment= 0; increment < 6; increment++){
-            //    row = new string[] { "Meggen", "Product "+increment.ToString(), "4000" };
-            //    dataGridView_Fahrplan.Rows.Add(row);
-            //}
-
-            //MessageBox.Show(cache.ToString());
-            //dataGridView_Fahrplan.Rows[0].ReadOnly = true;
-            //dataGridView_Fahrplan.Rows[1].ReadOnly = true;
-            //dataGridView_Fahrplan.Rows[2].ReadOnly = true;
-            //dataGridView_Fahrplan.Rows[3].ReadOnly = true;
-            //dataGridView_Fahrplan.Rows[4].ReadOnly = true;
-
-            String stationBoardString = "";
+           
+            String Övnummer = "";
+            String övlinie = "";
+            String övgesellschaft = "";
+                String to_destination = "";
 
             StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
             foreach (var entry in stationBoard.Entries)
             {
-                stationBoardString += entry.Name + "\n";
+              
+                
+                övgesellschaft += entry.Operator + "\n";
+                    DateTime departureString = entry.Stop.Departure;
+                    DateTime departureDateTime = (departureString);
+                    String departureFormatted = departureDateTime.ToString("HH:mm:ss");
+                    
+                   
+                    dataGridView_Fahrplan.ColumnCount = 4;
+                    dataGridView_Fahrplan.Columns[0].Name = "ÖV Kategorie";
+                    dataGridView_Fahrplan.Columns[1].Name = "ÖV Nummer";
+                    dataGridView_Fahrplan.Columns[2].Name = "Abfahrt";
+                    dataGridView_Fahrplan.Columns[3].Name = "Zielstation";
+                    
+                    string[] row = new string[] { entry.Category,entry.Number,departureFormatted,entry.To};
+                    dataGridView_Fahrplan.Rows.Add(row);
+                    
+                  
+
+
+
+                }
+
+            //    MessageBox.Show(Övnummer);
+            //MessageBox.Show(övlinie);
+            //MessageBox.Show(övgesellschaft);
+            //MessageBox.Show(to_destination);
+            }
+            else
+            {
+                MessageBox.Show("Bitte geben Sie eine gültige Station ein");
             }
 
-            MessageBox.Show(stationBoardString);
         }
 
        

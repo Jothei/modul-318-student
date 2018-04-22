@@ -32,11 +32,11 @@
             this.cb_fahrtaffelstationauswahl = new System.Windows.Forms.ComboBox();
             this.btn_searchstation = new System.Windows.Forms.Button();
             this.dataGridView_Fahrplan = new System.Windows.Forms.DataGridView();
-            this.Startstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Zielstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Zeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_calcVerbindungen = new System.Windows.Forms.Button();
+            this.öv_kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Öv_Linie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Zielort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fahrplan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,37 +75,24 @@
             // 
             // dataGridView_Fahrplan
             // 
+            this.dataGridView_Fahrplan.AllowUserToAddRows = false;
+            this.dataGridView_Fahrplan.AllowUserToDeleteRows = false;
+            this.dataGridView_Fahrplan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_Fahrplan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_Fahrplan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Fahrplan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Startstation,
-            this.Zielstation,
-            this.Zeit,
-            this.Gleis});
-            this.dataGridView_Fahrplan.Location = new System.Drawing.Point(179, 130);
+            this.öv_kategorie,
+            this.Öv_Linie,
+            this.Abfahrtszeit,
+            this.Zielort});
+            this.dataGridView_Fahrplan.Location = new System.Drawing.Point(75, 109);
             this.dataGridView_Fahrplan.Name = "dataGridView_Fahrplan";
+            this.dataGridView_Fahrplan.ReadOnly = true;
             this.dataGridView_Fahrplan.RowTemplate.Height = 24;
-            this.dataGridView_Fahrplan.Size = new System.Drawing.Size(466, 258);
+            this.dataGridView_Fahrplan.Size = new System.Drawing.Size(658, 258);
             this.dataGridView_Fahrplan.TabIndex = 3;
-            // 
-            // Startstation
-            // 
-            this.Startstation.HeaderText = "Startstation";
-            this.Startstation.Name = "Startstation";
-            // 
-            // Zielstation
-            // 
-            this.Zielstation.HeaderText = "Zielstation";
-            this.Zielstation.Name = "Zielstation";
-            // 
-            // Zeit
-            // 
-            this.Zeit.HeaderText = "Zeit";
-            this.Zeit.Name = "Zeit";
-            // 
-            // Gleis
-            // 
-            this.Gleis.HeaderText = "Gleis";
-            this.Gleis.Name = "Gleis";
             // 
             // btn_calcVerbindungen
             // 
@@ -116,6 +103,34 @@
             this.btn_calcVerbindungen.Text = "Verbindungen anzeigen";
             this.btn_calcVerbindungen.UseVisualStyleBackColor = true;
             this.btn_calcVerbindungen.Click += new System.EventHandler(this.btn_calcVerbindungen_Click);
+            // 
+            // öv_kategorie
+            // 
+            this.öv_kategorie.HeaderText = "Öv Kategorie";
+            this.öv_kategorie.Name = "öv_kategorie";
+            this.öv_kategorie.ReadOnly = true;
+            this.öv_kategorie.Width = 120;
+            // 
+            // Öv_Linie
+            // 
+            this.Öv_Linie.HeaderText = "Öv Linie";
+            this.Öv_Linie.Name = "Öv_Linie";
+            this.Öv_Linie.ReadOnly = true;
+            this.Öv_Linie.Width = 89;
+            // 
+            // Abfahrtszeit
+            // 
+            this.Abfahrtszeit.HeaderText = "Abfahrtszeit";
+            this.Abfahrtszeit.Name = "Abfahrtszeit";
+            this.Abfahrtszeit.ReadOnly = true;
+            this.Abfahrtszeit.Width = 112;
+            // 
+            // Zielort
+            // 
+            this.Zielort.HeaderText = "Zielort";
+            this.Zielort.Name = "Zielort";
+            this.Zielort.ReadOnly = true;
+            this.Zielort.Width = 77;
             // 
             // Form2
             // 
@@ -147,9 +162,9 @@
         private System.Windows.Forms.Button btn_searchstation;
         private System.Windows.Forms.DataGridView dataGridView_Fahrplan;
         private System.Windows.Forms.Button btn_calcVerbindungen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Startstation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Zielstation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Zeit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gleis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn öv_kategorie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Öv_Linie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrtszeit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Zielort;
     }
 }

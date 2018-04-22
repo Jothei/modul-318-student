@@ -26,6 +26,7 @@ namespace SwissTransportGUI
         Transport myTransport = new Transport();
         ITransport myIEtransport = new Transport();
         Connection myConnection = new Connection();
+        ConnectionPoint myConnectionPoint = new ConnectionPoint();
         //Transport tr = new Transport();
 
 
@@ -100,15 +101,18 @@ namespace SwissTransportGUI
             }
 
             private void btn_VerbindungSuchen_Click(object sender, EventArgs e)
+             
             {
-                if (cb_start.SelectedItem == null || cb_end.SelectedItem == null)
+            dgV_Verbindungen.Rows.Clear();
+            dgV_Verbindungen.Refresh();
+            if (cb_start.SelectedItem == null || cb_end.SelectedItem == null)
                 {
                     MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
 
-                    MessageBox.Show("Validation correct");
+                   
 
 
                     foreach (var station in myStations.StationList)
@@ -130,8 +134,7 @@ namespace SwissTransportGUI
                     }
 
 
-                    MessageBox.Show(idstartstation + " " + startstationname);
-                    MessageBox.Show(idendstation + " " + endstationname);
+                   
 
                     Connections connections = null;
 
@@ -145,19 +148,48 @@ namespace SwissTransportGUI
                     }
                     else
                     {
-                        connections = myTransport.GetConnections(startstationname, endstationname);
+                       connections = myTransport.GetConnections(startstationname, endstationname);
                     }
+                  
+                dgV_Verbindungen.ColumnCount = 5;
+                dgV_Verbindungen.Columns[0].Name = "ÖV Kategorie";
+                dgV_Verbindungen.Columns[1].Name = "ÖV Nummer";
+                dgV_Verbindungen.Columns[2].Name = "Abfahrtszeit";
+                dgV_Verbindungen.Columns[3].Name = "Ankunftszeit";
 
-                    foreach (Connection connection in connections.ConnectionList)
+
+
+
+                foreach (Connection connection in connections.ConnectionList)
                     {
-                        String departureString = connection.From.Departure;
-                        DateTime departureDateTime = DateTime.Parse(departureString);
-                        String departureFormatted = departureDateTime.ToString("HH:mm:ss dd.MM.yyyy");
 
-                        MessageBox.Show("Departure: " + departureFormatted);
-                    }
+                    String departureString = connection.From.Departure;
+                    DateTime departureDateTime = DateTime.Parse(departureString);
+                    String departureFormatted = departureDateTime.ToString("HH:mm:ss dd.MM.yyyy");
+                    MessageBox.Show(departureDateTime + connection.Duration);
+
+                    String arrivalString = connection.From.Departure;
+                    DateTime arrivalDateTime = DateTime.Parse(arrivalString);
+                    String arrivalFormatted = arrivalDateTime.ToString("HH:mm:ss dd.MM.yyyy");
+
+                    String arrivaltime = departureDateTime + connection.Duration;
+
+
+
+
+                    string[] row = new string[] {connection.From.Station.Name, connection.To.Station.Name, connection.Duration.ToString(), departureFormatted,arrivalString };
+                        dgV_Verbindungen.Rows.Add(row);
                     
+
+
+
+                    //string[] row = new string[] { entry.Category, entry.Number, departureFormatted, entry.To };
+                    //dgV_Verbindungen.Rows.Add(row);
+
+
                 }
+
+            }
 
             }
 

@@ -40,6 +40,9 @@
             this.dgV_Verbindungen = new System.Windows.Forms.DataGridView();
             this.dtp_datum_verbindung = new System.Windows.Forms.DateTimePicker();
             this.dtp_time_verbindung = new System.Windows.Forms.DateTimePicker();
+            this.Startposition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fahrzeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Verbindungen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,9 +148,18 @@
             // 
             // dgV_Verbindungen
             // 
+            this.dgV_Verbindungen.AllowUserToAddRows = false;
+            this.dgV_Verbindungen.AllowUserToDeleteRows = false;
+            this.dgV_Verbindungen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgV_Verbindungen.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgV_Verbindungen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgV_Verbindungen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Startposition,
+            this.Endstation,
+            this.Fahrzeit});
             this.dgV_Verbindungen.Location = new System.Drawing.Point(101, 298);
             this.dgV_Verbindungen.Name = "dgV_Verbindungen";
+            this.dgV_Verbindungen.ReadOnly = true;
             this.dgV_Verbindungen.RowTemplate.Height = 24;
             this.dgV_Verbindungen.Size = new System.Drawing.Size(373, 189);
             this.dgV_Verbindungen.TabIndex = 8;
@@ -170,6 +182,27 @@
             this.dtp_time_verbindung.ShowCheckBox = true;
             this.dtp_time_verbindung.Size = new System.Drawing.Size(232, 22);
             this.dtp_time_verbindung.TabIndex = 10;
+            // 
+            // Startposition
+            // 
+            this.Startposition.HeaderText = "Startposition";
+            this.Startposition.Name = "Startposition";
+            this.Startposition.ReadOnly = true;
+            this.Startposition.Width = 116;
+            // 
+            // Endstation
+            // 
+            this.Endstation.HeaderText = "Endstation";
+            this.Endstation.Name = "Endstation";
+            this.Endstation.ReadOnly = true;
+            this.Endstation.Width = 104;
+            // 
+            // Fahrzeit
+            // 
+            this.Fahrzeit.HeaderText = "Fahrzeit";
+            this.Fahrzeit.Name = "Fahrzeit";
+            this.Fahrzeit.ReadOnly = true;
+            this.Fahrzeit.Width = 88;
             // 
             // Mainform
             // 
@@ -214,6 +247,9 @@
         private System.Windows.Forms.DataGridView dgV_Verbindungen;
         private System.Windows.Forms.DateTimePicker dtp_datum_verbindung;
         private System.Windows.Forms.DateTimePicker dtp_time_verbindung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Startposition;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Endstation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fahrzeit;
     }
 }
 
