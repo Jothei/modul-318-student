@@ -143,10 +143,10 @@ namespace SwissTransportGUI
                         DateTime dateTime = dtp_datum_verbindung.Value;
                         dateTime = dateTime.AddHours(dtp_time_verbindung.Value.Hour);
                         dateTime = dateTime.AddMinutes(dtp_time_verbindung.Value.Minute);
-
-                        connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, dateTime);
-                    }
-                    else
+                    connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, dateTime);
+                  
+                }
+                else
                     {
                        connections = myTransport.GetConnections(startstationname, endstationname);
                     }
@@ -162,7 +162,6 @@ namespace SwissTransportGUI
 
                 foreach (Connection connection in connections.ConnectionList)
                     {
-
                     String departureString = connection.From.Departure;
                     DateTime departureDateTime = DateTime.Parse(departureString);
                     String departureFormatted = departureDateTime.ToString("HH:mm:ss dd.MM.yyyy");
@@ -172,7 +171,7 @@ namespace SwissTransportGUI
                     DateTime arrivalDateTime = DateTime.Parse(arrivalString);
                     String arrivalFormatted = arrivalDateTime.ToString("HH:mm:ss dd.MM.yyyy");
 
-                    String arrivaltime = departureDateTime + connection.Duration;
+                    
 
 
 

@@ -13,11 +13,11 @@ namespace SwissTransportGUI
 {
     public partial class Form2 : Form
     {
-    //    double distance;
-    //    string idstartstation;
-    //    string idendstation;
-    //    string endstationname;
-    //    string startstationname;
+        //    double distance;
+        //    string idstartstation;
+        //    string idendstation;
+        //    string endstationname;
+        //    string startstationname;
         public StationBoardRoot currentStation;
         Mainform myForm = new Mainform();
         Stations myStations = new Stations();
@@ -30,7 +30,7 @@ namespace SwissTransportGUI
         {
             InitializeComponent();
         }
-       
+
         private void btn_to_Form1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -42,7 +42,7 @@ namespace SwissTransportGUI
 
         private void btn_searchstation_Click(object sender, EventArgs e)
         {
-            
+
             myForm.typeahead(cb_fahrtaffelstationauswahl);
         }
 
@@ -54,47 +54,43 @@ namespace SwissTransportGUI
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text))
-                {
+            {
                 dataGridView_Fahrplan.Rows.Clear();
                 dataGridView_Fahrplan.Refresh();
                 string station = cb_fahrtaffelstationauswahl.Text;
 
-           
-            String Övnummer = "";
-            String övlinie = "";
-            String övgesellschaft = "";
+
+
+                String övgesellschaft = "";
                 String to_destination = "";
 
-            StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
-            foreach (var entry in stationBoard.Entries)
-            {
-              
-                
-                övgesellschaft += entry.Operator + "\n";
+                StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
+                foreach (var entry in stationBoard.Entries)
+                {
+
+
+                    övgesellschaft += entry.Operator + "\n";
                     DateTime departureString = entry.Stop.Departure;
                     DateTime departureDateTime = (departureString);
                     String departureFormatted = departureDateTime.ToString("HH:mm:ss");
-                    
-                   
+
+
                     dataGridView_Fahrplan.ColumnCount = 4;
                     dataGridView_Fahrplan.Columns[0].Name = "ÖV Kategorie";
                     dataGridView_Fahrplan.Columns[1].Name = "ÖV Nummer";
                     dataGridView_Fahrplan.Columns[2].Name = "Abfahrt";
                     dataGridView_Fahrplan.Columns[3].Name = "Zielstation";
-                    
-                    string[] row = new string[] { entry.Category,entry.Number,departureFormatted,entry.To};
+
+                    string[] row = new string[] { entry.Category, entry.Number, departureFormatted, entry.To };
                     dataGridView_Fahrplan.Rows.Add(row);
-                    
-                  
+
+
 
 
 
                 }
 
-            //    MessageBox.Show(Övnummer);
-            //MessageBox.Show(övlinie);
-            //MessageBox.Show(övgesellschaft);
-            //MessageBox.Show(to_destination);
+            
             }
             else
             {
@@ -103,7 +99,7 @@ namespace SwissTransportGUI
 
         }
 
-       
+
     }
-    }
+}
 
