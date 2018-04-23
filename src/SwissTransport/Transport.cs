@@ -8,8 +8,9 @@ namespace SwissTransport
     public class Transport : ITransport
     {
         public Stations GetStations(string query)
-        {   
+        {
             var request = CreateWebRequest("http://transport.opendata.ch/v1/locations?query=" + query);
+
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
 
@@ -20,9 +21,16 @@ namespace SwissTransport
                     , new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
                 return stations;
             }
-           
+            if (responseStream == null)
+            {
 
-            return null;
+                return null;
+                
+            }
+
+
+
+                return null;
         }
 
         public StationBoardRoot GetStationBoard(string station, string id)

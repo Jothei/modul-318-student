@@ -103,6 +103,7 @@ namespace SwissTransportGUI
             private void btn_VerbindungSuchen_Click(object sender, EventArgs e)
              
             {
+          
             dgV_Verbindungen.Rows.Clear();
             dgV_Verbindungen.Refresh();
             if (cb_start.SelectedItem == null || cb_end.SelectedItem == null)
@@ -154,8 +155,9 @@ namespace SwissTransportGUI
                 dgV_Verbindungen.ColumnCount = 5;
                 dgV_Verbindungen.Columns[0].Name = "ÖV Kategorie";
                 dgV_Verbindungen.Columns[1].Name = "ÖV Nummer";
-                dgV_Verbindungen.Columns[2].Name = "Abfahrtszeit";
-                dgV_Verbindungen.Columns[3].Name = "Ankunftszeit";
+                dgV_Verbindungen.Columns[2].Name = "Fahrzeit";
+                dgV_Verbindungen.Columns[3].Name = "Abfahrtszeit";
+                dgV_Verbindungen.Columns[4].Name = "Ankunftszeit";
 
 
 
@@ -165,7 +167,7 @@ namespace SwissTransportGUI
                     String departureString = connection.From.Departure;
                     DateTime departureDateTime = DateTime.Parse(departureString);
                     String departureFormatted = departureDateTime.ToString("HH:mm:ss dd.MM.yyyy");
-                    MessageBox.Show(departureDateTime + connection.Duration);
+                   // MessageBox.Show(departureDateTime + connection.Duration);
 
                     String arrivalString = connection.From.Departure;
                     DateTime arrivalDateTime = DateTime.Parse(arrivalString);
@@ -189,6 +191,8 @@ namespace SwissTransportGUI
                 }
 
             }
+            
+            
 
             }
 

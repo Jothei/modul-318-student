@@ -43,6 +43,8 @@
             this.Startposition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fahrzeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ankunftszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Verbindungen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +87,7 @@
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_close.Location = new System.Drawing.Point(514, 593);
+            this.btn_close.Location = new System.Drawing.Point(687, 593);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(96, 23);
             this.btn_close.TabIndex = 6;
@@ -156,12 +158,14 @@
             this.dgV_Verbindungen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Startposition,
             this.Endstation,
-            this.Fahrzeit});
-            this.dgV_Verbindungen.Location = new System.Drawing.Point(101, 298);
+            this.Fahrzeit,
+            this.Abfahrtszeit,
+            this.Ankunftszeit});
+            this.dgV_Verbindungen.Location = new System.Drawing.Point(12, 298);
             this.dgV_Verbindungen.Name = "dgV_Verbindungen";
             this.dgV_Verbindungen.ReadOnly = true;
             this.dgV_Verbindungen.RowTemplate.Height = 24;
-            this.dgV_Verbindungen.Size = new System.Drawing.Size(373, 189);
+            this.dgV_Verbindungen.Size = new System.Drawing.Size(771, 189);
             this.dgV_Verbindungen.TabIndex = 8;
             // 
             // dtp_datum_verbindung
@@ -204,12 +208,26 @@
             this.Fahrzeit.ReadOnly = true;
             this.Fahrzeit.Width = 88;
             // 
+            // Abfahrtszeit
+            // 
+            this.Abfahrtszeit.HeaderText = "Abfahrtszeit";
+            this.Abfahrtszeit.Name = "Abfahrtszeit";
+            this.Abfahrtszeit.ReadOnly = true;
+            this.Abfahrtszeit.Width = 112;
+            // 
+            // Ankunftszeit
+            // 
+            this.Ankunftszeit.HeaderText = "Ankunftszeit";
+            this.Ankunftszeit.Name = "Ankunftszeit";
+            this.Ankunftszeit.ReadOnly = true;
+            this.Ankunftszeit.Width = 114;
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_close;
-            this.ClientSize = new System.Drawing.Size(622, 628);
+            this.ClientSize = new System.Drawing.Size(795, 628);
             this.Controls.Add(this.dtp_time_verbindung);
             this.Controls.Add(this.dtp_datum_verbindung);
             this.Controls.Add(this.dgV_Verbindungen);
@@ -250,6 +268,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Startposition;
         private System.Windows.Forms.DataGridViewTextBoxColumn Endstation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fahrzeit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrtszeit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ankunftszeit;
     }
 }
 
