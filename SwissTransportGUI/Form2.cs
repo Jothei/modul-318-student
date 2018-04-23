@@ -109,7 +109,6 @@ namespace SwissTransportGUI
                 String övgesellschaft = "";
                 
 
-                MessageBox.Show(xcoordinaten);
                 StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
                 foreach (var entry in stationBoard.Entries)
                 {

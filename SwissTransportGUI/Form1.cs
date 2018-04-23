@@ -181,7 +181,7 @@ namespace SwissTransportGUI
                    DateTime timedatetime = dtp_time_verbindung.Value;
                     string timeformatted = timedatetime.ToString("HH:mm");
 
-                    MessageBox.Show(datumformatted + " "+timeformatted);
+
                    
                     connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, datumformatted, timeformatted );
 

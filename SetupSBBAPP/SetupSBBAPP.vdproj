@@ -107,6 +107,20 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_31BD388487F9430D88D35D2507E64D83"
+            {
+            "Name" = "8:Primäre Ausgabe from SwissTransportGUI (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_737E40F66E344743A7A9CC220E1ABF12"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_4C9BAFA8_98D6_43D0_BA14_B7219E743F7B"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -291,7 +305,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetupSBBAPP"
         "ProductCode" = "8:{289390C6-6FEC-4292-AE50-CB1EA27A70A3}"
-        "PackageCode" = "8:{ABB1CD19-F28D-4259-9F0A-1E06D8ACA169}"
+        "PackageCode" = "8:{2E669BC7-9C3D-461E-AC39-E41016B64EBE}"
         "UpgradeCode" = "8:{AB8DF2C7-9DF2-4767-BEB1-B6E70A2755E7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
