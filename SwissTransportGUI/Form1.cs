@@ -111,7 +111,17 @@ namespace SwissTransportGUI
         public Mainform()
         {
             InitializeComponent();
-
+         
+        }
+     private void Focuscombobox(ComboBox myCombobox)
+        {
+            myCombobox.Focus();
+        }
+       
+        //Cleart die Combobox
+        public void clearcb(ComboBox box)
+        {
+            box.Text = "";
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -132,7 +142,7 @@ namespace SwissTransportGUI
             else
             {
 
-
+                
 
 
                 foreach (var station in myStations.StationList)
@@ -189,8 +199,7 @@ namespace SwissTransportGUI
 
 
 
-
-                foreach (Connection connection in connections.ConnectionList)
+                    foreach (Connection connection in connections.ConnectionList)
                 {
                     String departureString = connection.From.Departure;
                     DateTime departureDateTime = DateTime.Parse(departureString);
@@ -218,7 +227,8 @@ namespace SwissTransportGUI
                 }
 
             }
-
+            clearcb(cb_end);
+            clearcb(cb_start);
 
 
         }
@@ -226,23 +236,17 @@ namespace SwissTransportGUI
         private void btn_searchststation_Click(object sender, EventArgs e)
         {
             typeahead(cb_start);
+            Focuscombobox(cb_end);
         }
 
         private void btn_searchenstation_Click(object sender, EventArgs e)
         {
             typeahead(cb_end);
 
-        }
-
-        private void cb_end_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void cb_start_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btn_fahrplan_Click(object sender, EventArgs e)
         {
@@ -252,9 +256,6 @@ namespace SwissTransportGUI
             form2.Show();
         }
 
-        private void cb_start_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

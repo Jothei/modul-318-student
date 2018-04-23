@@ -105,8 +105,8 @@
             this.cb_start.Name = "cb_start";
             this.cb_start.Size = new System.Drawing.Size(227, 24);
             this.cb_start.TabIndex = 1;
-            this.cb_start.SelectedIndexChanged += new System.EventHandler(this.cb_start_SelectedIndexChanged);
-            this.cb_start.TextChanged += new System.EventHandler(this.cb_start_TextChanged);
+//            this.cb_start.SelectedIndexChanged += new System.EventHandler(this.cb_start_SelectedIndexChanged);
+         //   this.cb_start.TextChanged += new System.EventHandler(this.cb_start_TextChanged);
             // 
             // cb_end
             // 
@@ -115,7 +115,7 @@
             this.cb_end.Name = "cb_end";
             this.cb_end.Size = new System.Drawing.Size(232, 24);
             this.cb_end.TabIndex = 3;
-            this.cb_end.SelectedIndexChanged += new System.EventHandler(this.cb_end_SelectedIndexChanged);
+//            this.cb_end.SelectedIndexChanged += new System.EventHandler(this.cb_end_SelectedIndexChanged);
             // 
             // btn_searchststation
             // 

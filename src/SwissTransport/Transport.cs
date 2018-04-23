@@ -79,7 +79,7 @@ namespace SwissTransport
 
         public Connections GetConnectionsWidthDateTime(string fromStation, string toStattion,string datum,string zeit)
         {
-            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStattion + "&limit=5" + "&date="+datum+"&time="+ zeit);
+            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStattion + "&limit=5"+ "&date="+datum+"&time="+ zeit);
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
 

@@ -37,6 +37,10 @@
             this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zielort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_calcVerbindungen = new System.Windows.Forms.Button();
+            this.btn_to_google_maps = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txt_Emailadresse = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fahrplan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +48,7 @@
             // 
             this.btn_to_Form1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_to_Form1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_to_Form1.Location = new System.Drawing.Point(652, 415);
+            this.btn_to_Form1.Location = new System.Drawing.Point(770, 651);
             this.btn_to_Form1.Name = "btn_to_Form1";
             this.btn_to_Form1.Size = new System.Drawing.Size(136, 34);
             this.btn_to_Form1.TabIndex = 4;
@@ -60,12 +64,13 @@
             this.cb_fahrtaffelstationauswahl.FormattingEnabled = true;
             this.cb_fahrtaffelstationauswahl.Location = new System.Drawing.Point(179, 42);
             this.cb_fahrtaffelstationauswahl.Name = "cb_fahrtaffelstationauswahl";
-            this.cb_fahrtaffelstationauswahl.Size = new System.Drawing.Size(368, 24);
+            this.cb_fahrtaffelstationauswahl.Size = new System.Drawing.Size(486, 24);
             this.cb_fahrtaffelstationauswahl.TabIndex = 1;
             // 
             // btn_searchstation
             // 
-            this.btn_searchstation.Location = new System.Drawing.Point(580, 42);
+            this.btn_searchstation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_searchstation.Location = new System.Drawing.Point(683, 43);
             this.btn_searchstation.Name = "btn_searchstation";
             this.btn_searchstation.Size = new System.Drawing.Size(153, 23);
             this.btn_searchstation.TabIndex = 2;
@@ -91,7 +96,7 @@
             this.dataGridView_Fahrplan.Name = "dataGridView_Fahrplan";
             this.dataGridView_Fahrplan.ReadOnly = true;
             this.dataGridView_Fahrplan.RowTemplate.Height = 24;
-            this.dataGridView_Fahrplan.Size = new System.Drawing.Size(658, 258);
+            this.dataGridView_Fahrplan.Size = new System.Drawing.Size(776, 458);
             this.dataGridView_Fahrplan.TabIndex = 3;
             this.dataGridView_Fahrplan.TabStop = false;
             // 
@@ -125,7 +130,7 @@
             // 
             // btn_calcVerbindungen
             // 
-            this.btn_calcVerbindungen.Location = new System.Drawing.Point(272, 73);
+            this.btn_calcVerbindungen.Location = new System.Drawing.Point(192, 72);
             this.btn_calcVerbindungen.Name = "btn_calcVerbindungen";
             this.btn_calcVerbindungen.Size = new System.Drawing.Size(146, 30);
             this.btn_calcVerbindungen.TabIndex = 3;
@@ -133,13 +138,62 @@
             this.btn_calcVerbindungen.UseVisualStyleBackColor = true;
             this.btn_calcVerbindungen.Click += new System.EventHandler(this.btn_calcVerbindungen_Click);
             // 
+            // btn_to_google_maps
+            // 
+            this.btn_to_google_maps.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_to_google_maps.Location = new System.Drawing.Point(12, 638);
+            this.btn_to_google_maps.Name = "btn_to_google_maps";
+            this.btn_to_google_maps.Size = new System.Drawing.Size(539, 57);
+            this.btn_to_google_maps.TabIndex = 5;
+            this.btn_to_google_maps.Text = "Station auf Google Maps anzeigen";
+            this.btn_to_google_maps.UseVisualStyleBackColor = true;
+            this.btn_to_google_maps.Click += new System.EventHandler(this.btn_to_google_maps_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(192, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Bitte geben sie eine gültige Station ein";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(557, 638);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(189, 57);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Email von dem Fahrplan senden";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txt_Emailadresse
+            // 
+            this.txt_Emailadresse.Location = new System.Drawing.Point(557, 610);
+            this.txt_Emailadresse.Name = "txt_Emailadresse";
+            this.txt_Emailadresse.Size = new System.Drawing.Size(176, 22);
+            this.txt_Emailadresse.TabIndex = 8;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.btn_to_Form1;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(918, 697);
+            this.Controls.Add(this.txt_Emailadresse);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_to_google_maps);
             this.Controls.Add(this.btn_calcVerbindungen);
             this.Controls.Add(this.dataGridView_Fahrplan);
             this.Controls.Add(this.btn_searchstation);
@@ -153,6 +207,7 @@
             this.Text = "Fahrplan";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fahrplan)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,5 +222,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Öv_Linie;
         private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrtszeit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Zielort;
+        private System.Windows.Forms.Button btn_to_google_maps;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_Emailadresse;
     }
 }

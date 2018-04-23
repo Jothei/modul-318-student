@@ -8,27 +8,68 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SwissTransport;
+using System.Net.Mail;
 
 namespace SwissTransportGUI
 {
     public partial class Form2 : Form
     {
-        //    double distance;
-        //    string idstartstation;
-        //    string idendstation;
-        //    string endstationname;
-        //    string startstationname;
+        string station;
+     public bool checkifverbindungwaspressed = false;
+
         public StationBoardRoot currentStation;
         Mainform myForm = new Mainform();
         Stations myStations = new Stations();
         Stations myStationsstart = new Stations();
-
+        Coordinate myCoordinate = new Coordinate();
         Transport myTransport = new Transport();
         ITransport myIEtransport = new Transport();
         Connection myConnection = new Connection();
         public Form2()
         {
             InitializeComponent();
+        }
+
+        public void sending_email(string email,string content)
+        {
+            if(checkifverbindungwaspressed == true) {
+                try
+                {
+
+
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                    mail.From = new MailAddress("m318jo@gmail.com");
+                    mail.To.Add("jonithe@hotmail.ch");
+                    mail.Subject = "Ihr Fahrplan";
+                    mail.Body = content;
+
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("m318jo@gmail.com", "abcmeg11");
+                    SmtpServer.EnableSsl = true;
+
+                    SmtpServer.Send(mail);
+                    MessageBox.Show("Das Email wurde erfolgreich an " + email.ToString() + " gesendet!");
+                    checkifverbindungwaspressed = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    checkifverbindungwaspressed = false;
+                }
+            }
+
+            else if(checkifverbindungwaspressed == false)
+            {
+                MessageBox.Show("Email wurde nicht abgesendet, da keine gültige Station eingegeben wurde oder nicht auf Verbinden gedrückt wurde");
+                
+            }
+            
+        }
+        public void gotoSite(string url)
+        {
+            System.Diagnostics.Process.Start(url);
         }
 
         private void btn_to_Form1_Click(object sender, EventArgs e)
@@ -53,16 +94,16 @@ namespace SwissTransportGUI
 
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
         {
+            checkifverbindungwaspressed = true;
             if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text))
             {
                 dataGridView_Fahrplan.Rows.Clear();
                 dataGridView_Fahrplan.Refresh();
-                string station = cb_fahrtaffelstationauswahl.Text;
+                station = cb_fahrtaffelstationauswahl.Text;
 
-
+              
 
                 String övgesellschaft = "";
-                String to_destination = "";
 
                 StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
                 foreach (var entry in stationBoard.Entries)
@@ -85,7 +126,7 @@ namespace SwissTransportGUI
                     dataGridView_Fahrplan.Rows.Add(row);
 
 
-
+                    _bodycontentformail += "ÖV Kategorie: " + entry.Category + " ÖV Nummer: " + entry.Number + " Abfahrt: " + departureFormatted + " Zielstation: " + entry.To + "\n\n";
 
 
                 }
@@ -99,7 +140,52 @@ namespace SwissTransportGUI
 
         }
 
+        private void btn_to_google_maps_Click(object sender, EventArgs e)
+        {
 
+            if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text))
+            {
+             
+                   
+                       gotoSite("https://www.google.ch/maps/@" + "47" + "," + "12" + "z");
+                    
+            
+            }
+            else
+            {
+                MessageBox.Show("Bitte geben Sie eine gültige Station ein, damit Sie diesen Button drücken können", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+        }
+
+        private void btn_to_email_Click(object sender, EventArgs e)
+        {
+            sending_email("jonithe@hotmail.ch", _bodycontentformail);
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text) && !string.IsNullOrEmpty(txt_Emailadresse.Text))
+            {
+                sending_email("jonithe@hotmail.ch", _bodycontentformail);
+            }
+
+
+            else {
+                MessageBox.Show("Error\nBitte geben Sie eine gültige Station ein", "Fehler");
+            }
+           
+          
+        }
+        public string _bodycontentformail;
+
+        public string dataformail
+        {
+            get { return _bodycontentformail; }
+            set { _bodycontentformail = value; }
+        }
     }
 }
 
