@@ -28,11 +28,15 @@ namespace SwissTransportGUI
         Connection myConnection = new Connection();
         ConnectionPoint myConnectionPoint = new ConnectionPoint();
         //Transport tr = new Transport();
-
+        private void clearcb()
+        {
+            cb_end.Text = "";
+            cb_start.Text = "";
+        }
         private string FormatDateTime(String DateTime)
         {
             string newformattedString = "";
-            for(int i = 0; i< DateTime.Length; i++)
+            for (int i = 0; i < DateTime.Length; i++)
             {
                 switch (DateTime[i])
                 {
@@ -111,13 +115,10 @@ namespace SwissTransportGUI
         public Mainform()
         {
             InitializeComponent();
-         
+
         }
-     private void Focuscombobox(ComboBox myCombobox)
-        {
-            myCombobox.Focus();
-        }
-       
+        
+
         //Cleart die Combobox
         public void clearcb(ComboBox box)
         {
@@ -142,7 +143,7 @@ namespace SwissTransportGUI
             else
             {
 
-                
+
 
 
                 foreach (var station in myStations.StationList)
@@ -151,7 +152,7 @@ namespace SwissTransportGUI
                     {
                         idendstation = station.Id;
                         endstationname = station.Name;
-                        
+
                     }
 
                 }
@@ -178,12 +179,12 @@ namespace SwissTransportGUI
                     string datumformatted = dateTime.ToString("yyyy-MM-dd");
 
 
-                   DateTime timedatetime = dtp_time_verbindung.Value;
+                    DateTime timedatetime = dtp_time_verbindung.Value;
                     string timeformatted = timedatetime.ToString("HH:mm");
 
 
-                   
-                    connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, datumformatted, timeformatted );
+
+                    connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, datumformatted, timeformatted);
 
                 }
                 else
@@ -200,12 +201,12 @@ namespace SwissTransportGUI
 
 
 
-                    foreach (Connection connection in connections.ConnectionList)
+                foreach (Connection connection in connections.ConnectionList)
                 {
                     String departureString = connection.From.Departure;
                     DateTime departureDateTime = DateTime.Parse(departureString);
                     String departureFormatted = departureDateTime.ToString("HH:mm:ss dd.MM.yyyy");
-                   
+
                     String arrivalString = connection.To.Arrival;
                     DateTime arrivalDateTime = DateTime.Parse(arrivalString);
                     String arrivalFormatted = arrivalDateTime.ToString("HH:mm:ss dd.MM.yyyy");
@@ -228,8 +229,7 @@ namespace SwissTransportGUI
                 }
 
             }
-            clearcb(cb_end);
-            clearcb(cb_start);
+           
 
 
         }
@@ -237,7 +237,7 @@ namespace SwissTransportGUI
         private void btn_searchststation_Click(object sender, EventArgs e)
         {
             typeahead(cb_start);
-            Focuscombobox(cb_end);
+           
         }
 
         private void btn_searchenstation_Click(object sender, EventArgs e)
@@ -247,7 +247,7 @@ namespace SwissTransportGUI
 
         }
 
-       
+
 
         private void btn_fahrplan_Click(object sender, EventArgs e)
         {
@@ -257,6 +257,20 @@ namespace SwissTransportGUI
             form2.Show();
         }
 
-       
+        private void btn_change_destinations_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(cb_start.Text) || !string.IsNullOrEmpty(cb_end.Text))
+            {
+                string start = cb_start.Text;
+                string end = cb_end.Text;
+                cb_start.Text = end;
+                cb_end.Text = start;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clearcb();
+        }
     }
 }

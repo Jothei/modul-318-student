@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.lbl_Startposition = new System.Windows.Forms.Label();
             this.lbl_Endstation = new System.Windows.Forms.Label();
             this.btn_VerbindungSuchen = new System.Windows.Forms.Button();
@@ -38,13 +39,15 @@
             this.btn_searchenstation = new System.Windows.Forms.Button();
             this.btn_fahrplan = new System.Windows.Forms.Button();
             this.dgV_Verbindungen = new System.Windows.Forms.DataGridView();
-            this.dtp_datum_verbindung = new System.Windows.Forms.DateTimePicker();
-            this.dtp_time_verbindung = new System.Windows.Forms.DateTimePicker();
             this.Startposition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fahrzeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunftszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtp_datum_verbindung = new System.Windows.Forms.DateTimePicker();
+            this.dtp_time_verbindung = new System.Windows.Forms.DateTimePicker();
+            this.btn_change_destinations = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Verbindungen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,8 +108,6 @@
             this.cb_start.Name = "cb_start";
             this.cb_start.Size = new System.Drawing.Size(227, 24);
             this.cb_start.TabIndex = 1;
-//            this.cb_start.SelectedIndexChanged += new System.EventHandler(this.cb_start_SelectedIndexChanged);
-         //   this.cb_start.TextChanged += new System.EventHandler(this.cb_start_TextChanged);
             // 
             // cb_end
             // 
@@ -115,7 +116,6 @@
             this.cb_end.Name = "cb_end";
             this.cb_end.Size = new System.Drawing.Size(232, 24);
             this.cb_end.TabIndex = 3;
-//            this.cb_end.SelectedIndexChanged += new System.EventHandler(this.cb_end_SelectedIndexChanged);
             // 
             // btn_searchststation
             // 
@@ -169,25 +169,6 @@
             this.dgV_Verbindungen.TabIndex = 8;
             this.dgV_Verbindungen.TabStop = false;
             // 
-            // dtp_datum_verbindung
-            // 
-            this.dtp_datum_verbindung.Checked = false;
-            this.dtp_datum_verbindung.Location = new System.Drawing.Point(121, 175);
-            this.dtp_datum_verbindung.Name = "dtp_datum_verbindung";
-            this.dtp_datum_verbindung.ShowCheckBox = true;
-            this.dtp_datum_verbindung.Size = new System.Drawing.Size(232, 22);
-            this.dtp_datum_verbindung.TabIndex = 5;
-            // 
-            // dtp_time_verbindung
-            // 
-            this.dtp_time_verbindung.Checked = false;
-            this.dtp_time_verbindung.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_time_verbindung.Location = new System.Drawing.Point(121, 204);
-            this.dtp_time_verbindung.Name = "dtp_time_verbindung";
-            this.dtp_time_verbindung.ShowCheckBox = true;
-            this.dtp_time_verbindung.Size = new System.Drawing.Size(232, 22);
-            this.dtp_time_verbindung.TabIndex = 6;
-            // 
             // Startposition
             // 
             this.Startposition.HeaderText = "Startposition";
@@ -223,6 +204,49 @@
             this.Ankunftszeit.ReadOnly = true;
             this.Ankunftszeit.Width = 114;
             // 
+            // dtp_datum_verbindung
+            // 
+            this.dtp_datum_verbindung.Checked = false;
+            this.dtp_datum_verbindung.Location = new System.Drawing.Point(121, 175);
+            this.dtp_datum_verbindung.Name = "dtp_datum_verbindung";
+            this.dtp_datum_verbindung.ShowCheckBox = true;
+            this.dtp_datum_verbindung.Size = new System.Drawing.Size(232, 22);
+            this.dtp_datum_verbindung.TabIndex = 5;
+            // 
+            // dtp_time_verbindung
+            // 
+            this.dtp_time_verbindung.Checked = false;
+            this.dtp_time_verbindung.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtp_time_verbindung.Location = new System.Drawing.Point(121, 204);
+            this.dtp_time_verbindung.Name = "dtp_time_verbindung";
+            this.dtp_time_verbindung.ShowCheckBox = true;
+            this.dtp_time_verbindung.Size = new System.Drawing.Size(232, 22);
+            this.dtp_time_verbindung.TabIndex = 6;
+            // 
+            // btn_change_destinations
+            // 
+            this.btn_change_destinations.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_change_destinations.BackgroundImage")));
+            this.btn_change_destinations.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_change_destinations.Image = ((System.Drawing.Image)(resources.GetObject("btn_change_destinations.Image")));
+            this.btn_change_destinations.Location = new System.Drawing.Point(12, 46);
+            this.btn_change_destinations.Name = "btn_change_destinations";
+            this.btn_change_destinations.Size = new System.Drawing.Size(81, 75);
+            this.btn_change_destinations.TabIndex = 9;
+            this.btn_change_destinations.Text = "▲▼";
+            this.btn_change_destinations.UseVisualStyleBackColor = true;
+            this.btn_change_destinations.Click += new System.EventHandler(this.btn_change_destinations_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(12, 146);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 66);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Mainform
             // 
             this.AcceptButton = this.btn_VerbindungSuchen;
@@ -230,6 +254,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_close;
             this.ClientSize = new System.Drawing.Size(795, 628);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_change_destinations);
             this.Controls.Add(this.dtp_time_verbindung);
             this.Controls.Add(this.dtp_datum_verbindung);
             this.Controls.Add(this.dgV_Verbindungen);
@@ -272,6 +298,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fahrzeit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrtszeit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunftszeit;
+        private System.Windows.Forms.Button btn_change_destinations;
+        private System.Windows.Forms.Button button1;
     }
 }
 

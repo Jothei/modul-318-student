@@ -15,7 +15,7 @@ namespace SwissTransportGUI
     public partial class Form2 : Form
     {
         string station;
-     public bool checkifverbindungwaspressed = false;
+        public bool checkifverbindungwaspressed = false;
 
         public StationBoardRoot currentStation;
         Mainform myForm = new Mainform();
@@ -30,9 +30,10 @@ namespace SwissTransportGUI
             InitializeComponent();
         }
 
-        public void sending_email(string email,string content)
+        public void sending_email(string email, string content)
         {
-            if(checkifverbindungwaspressed == true) {
+            if (checkifverbindungwaspressed == true)
+            {
                 try
                 {
 
@@ -41,7 +42,7 @@ namespace SwissTransportGUI
                     SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                     mail.From = new MailAddress("m318jo@gmail.com");
-                    mail.To.Add("jonithe@hotmail.ch");
+                    mail.To.Add(email);
                     mail.Subject = "Ihr Fahrplan";
                     mail.Body = content;
 
@@ -60,12 +61,12 @@ namespace SwissTransportGUI
                 }
             }
 
-            else if(checkifverbindungwaspressed == false)
+            else if (checkifverbindungwaspressed == false)
             {
                 MessageBox.Show("Email wurde nicht abgesendet, da keine gültige Station eingegeben wurde oder nicht auf Verbinden gedrückt wurde");
-                
+
             }
-            
+
         }
         public void gotoSite(string url)
         {
@@ -97,25 +98,25 @@ namespace SwissTransportGUI
             checkifverbindungwaspressed = true;
             if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
             {
-                string xcord;
 
-              
+
+
                 dataGridView_Fahrplan.Rows.Clear();
                 dataGridView_Fahrplan.Refresh();
                 station = cb_fahrtafelstationauswahl.Text;
-                string xcoordinaten = "";
-              
+
+
 
                 String övgesellschaft = "";
-                
+
 
                 StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
                 foreach (var entry in stationBoard.Entries)
                 {
-                    
 
 
-                        övgesellschaft += entry.Operator + "\n";
+
+                    övgesellschaft += entry.Operator + "\n";
                     DateTime departureString = entry.Stop.Departure;
                     DateTime departureDateTime = (departureString);
                     String departureFormatted = departureDateTime.ToString("HH:mm:ss");
@@ -136,7 +137,7 @@ namespace SwissTransportGUI
 
                 }
 
-            
+
             }
             else
             {
@@ -145,44 +146,29 @@ namespace SwissTransportGUI
 
         }
 
-        private void btn_to_google_maps_Click(object sender, EventArgs e)
-        {
-
-            if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
-            {
-             
-                   
-                       gotoSite("https://www.google.ch/maps/@" + "47" + "," + "12" + "z");
-                    
-            
-            }
-            else
-            {
-                MessageBox.Show("Bitte geben Sie eine gültige Station ein, damit Sie diesen Button drücken können", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
-        }
+       
+       
 
         private void btn_to_email_Click(object sender, EventArgs e)
         {
-            sending_email("jonithe@hotmail.ch", _bodycontentformail);
-           
+            sending_email(txt_Emailadresse.Text, _bodycontentformail);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text) && !string.IsNullOrEmpty(txt_Emailadresse.Text))
             {
-                sending_email("jonithe@hotmail.ch", _bodycontentformail);
+                sending_email(txt_Emailadresse.Text, _bodycontentformail);
             }
 
 
-            else {
+            else
+            {
                 MessageBox.Show("Error\nBitte geben Sie eine gültige Station ein", "Fehler");
             }
-           
-          
+
+
         }
         public string _bodycontentformail;
 
