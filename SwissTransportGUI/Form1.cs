@@ -29,7 +29,26 @@ namespace SwissTransportGUI
         ConnectionPoint myConnectionPoint = new ConnectionPoint();
         //Transport tr = new Transport();
 
+        private string FormatDateTime(String DateTime)
+        {
+            string newformattedString = "";
+            for(int i = 0; i< DateTime.Length; i++)
+            {
+                switch (DateTime[i])
+                {
+                    case ':':
+                    case '.':
+                        newformattedString += '-';
+                        break;
+                    default:
+                        newformattedString += DateTime[i];
+                        break;
 
+
+                }
+            }
+            return newformattedString;
+        }
         //Die folgende Methode aktiviert typeahead
         public void typeahead(ComboBox comboboxname)
         {
@@ -140,11 +159,20 @@ namespace SwissTransportGUI
                 Connections connections = null;
 
                 if (dtp_datum_verbindung.Checked == true && dtp_time_verbindung.Checked == true)
+
+
                 {
                     DateTime dateTime = dtp_datum_verbindung.Value;
-                    dateTime = dateTime.AddHours(dtp_time_verbindung.Value.Hour);
-                    dateTime = dateTime.AddMinutes(dtp_time_verbindung.Value.Minute);
-                    connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, dateTime);
+                    String dateTimestring = dateTime.ToShortDateString();
+                    string datumformatted = dateTime.ToString("yyyy-MM-dd");
+
+
+                   DateTime timedatetime = dtp_time_verbindung.Value;
+                    string timeformatted = timedatetime.ToString("HH:mm");
+
+                    MessageBox.Show(datumformatted + " "+timeformatted);
+                   
+                    connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, datumformatted, timeformatted );
 
                 }
                 else
