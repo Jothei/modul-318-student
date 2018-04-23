@@ -77,7 +77,7 @@
             this.btn_VerbindungSuchen.Location = new System.Drawing.Point(121, 242);
             this.btn_VerbindungSuchen.Name = "btn_VerbindungSuchen";
             this.btn_VerbindungSuchen.Size = new System.Drawing.Size(232, 40);
-            this.btn_VerbindungSuchen.TabIndex = 5;
+            this.btn_VerbindungSuchen.TabIndex = 7;
             this.btn_VerbindungSuchen.Text = "Verbindung suchen";
             this.btn_VerbindungSuchen.UseVisualStyleBackColor = true;
             this.btn_VerbindungSuchen.Click += new System.EventHandler(this.btn_VerbindungSuchen_Click);
@@ -143,7 +143,7 @@
             this.btn_fahrplan.Location = new System.Drawing.Point(101, 513);
             this.btn_fahrplan.Name = "btn_fahrplan";
             this.btn_fahrplan.Size = new System.Drawing.Size(295, 50);
-            this.btn_fahrplan.TabIndex = 7;
+            this.btn_fahrplan.TabIndex = 8;
             this.btn_fahrplan.Text = "Zum Stationen Fahrplan";
             this.btn_fahrplan.UseVisualStyleBackColor = true;
             this.btn_fahrplan.Click += new System.EventHandler(this.btn_fahrplan_Click);
@@ -167,6 +167,7 @@
             this.dgV_Verbindungen.RowTemplate.Height = 24;
             this.dgV_Verbindungen.Size = new System.Drawing.Size(771, 189);
             this.dgV_Verbindungen.TabIndex = 8;
+            this.dgV_Verbindungen.TabStop = false;
             // 
             // dtp_datum_verbindung
             // 
@@ -175,7 +176,7 @@
             this.dtp_datum_verbindung.Name = "dtp_datum_verbindung";
             this.dtp_datum_verbindung.ShowCheckBox = true;
             this.dtp_datum_verbindung.Size = new System.Drawing.Size(232, 22);
-            this.dtp_datum_verbindung.TabIndex = 9;
+            this.dtp_datum_verbindung.TabIndex = 5;
             // 
             // dtp_time_verbindung
             // 
@@ -185,7 +186,7 @@
             this.dtp_time_verbindung.Name = "dtp_time_verbindung";
             this.dtp_time_verbindung.ShowCheckBox = true;
             this.dtp_time_verbindung.Size = new System.Drawing.Size(232, 22);
-            this.dtp_time_verbindung.TabIndex = 10;
+            this.dtp_time_verbindung.TabIndex = 6;
             // 
             // Startposition
             // 
@@ -224,6 +225,7 @@
             // 
             // Mainform
             // 
+            this.AcceptButton = this.btn_VerbindungSuchen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_close;

@@ -49,7 +49,7 @@ namespace SwissTransportGUI
 
                     }
                 }
-               else if (comboboxname == cb_end)
+                else if (comboboxname == cb_end)
                 {
                     myStations.StationList = t.GetStations(comboboxname.Text).StationList;
                     if (myStations.StationList.Count > 0)
@@ -72,7 +72,7 @@ namespace SwissTransportGUI
 
                     }
                 }
-                else 
+                else
                 {
                     myStationsstart.StationList = t.GetStations(comboboxname.Text).StationList;
                     if (myStationsstart.StationList.Count > 0)
@@ -84,74 +84,74 @@ namespace SwissTransportGUI
                     }
                 }
 
-                
+
 
             }
         }
 
-            public Mainform()
-            {
-                InitializeComponent();
-            
-            }
+        public Mainform()
+        {
+            InitializeComponent();
 
-            private void btn_close_Click(object sender, EventArgs e)
-            {
-                this.Close();
-            }
+        }
 
-            private void btn_VerbindungSuchen_Click(object sender, EventArgs e)
-             
-            {
-          
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_VerbindungSuchen_Click(object sender, EventArgs e)
+
+        {
+
             dgV_Verbindungen.Rows.Clear();
             dgV_Verbindungen.Refresh();
             if (cb_start.SelectedItem == null || cb_end.SelectedItem == null)
+            {
+                MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+
+
+
+                foreach (var station in myStations.StationList)
                 {
-                    MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (station.Name == (cb_end.SelectedItem as Station).Name)
+                    {
+                        idendstation = station.Id;
+                        endstationname = station.Name;
+                    }
+
                 }
-                else
+                foreach (var station2 in myStationsstart.StationList)
                 {
-
-                   
-
-
-                    foreach (var station in myStations.StationList)
+                    if (station2.Name == (cb_start.SelectedItem as Station).Name)
                     {
-                        if (station.Name == (cb_end.SelectedItem as Station).Name)
-                        {
-                            idendstation = station.Id;
-                            endstationname = station.Name;
-                        }
-
+                        idstartstation = station2.Id;
+                        startstationname = station2.Name;
                     }
-                    foreach (var station2 in myStationsstart.StationList)
-                    {
-                        if (station2.Name == (cb_start.SelectedItem as Station).Name)
-                        {
-                            idstartstation = station2.Id;
-                            startstationname = station2.Name;
-                        }
-                    }
+                }
 
 
-                   
 
-                    Connections connections = null;
 
-                    if(dtp_datum_verbindung.Checked == true && dtp_time_verbindung.Checked == true)
-                    {
-                        DateTime dateTime = dtp_datum_verbindung.Value;
-                        dateTime = dateTime.AddHours(dtp_time_verbindung.Value.Hour);
-                        dateTime = dateTime.AddMinutes(dtp_time_verbindung.Value.Minute);
+                Connections connections = null;
+
+                if (dtp_datum_verbindung.Checked == true && dtp_time_verbindung.Checked == true)
+                {
+                    DateTime dateTime = dtp_datum_verbindung.Value;
+                    dateTime = dateTime.AddHours(dtp_time_verbindung.Value.Hour);
+                    dateTime = dateTime.AddMinutes(dtp_time_verbindung.Value.Minute);
                     connections = myTransport.GetConnectionsWidthDateTime(startstationname, endstationname, dateTime);
-                  
+
                 }
                 else
-                    {
-                       connections = myTransport.GetConnections(startstationname, endstationname);
-                    }
-                  
+                {
+                    connections = myTransport.GetConnections(startstationname, endstationname);
+                }
+
                 dgV_Verbindungen.ColumnCount = 5;
                 dgV_Verbindungen.Columns[0].Name = "ÖV Kategorie";
                 dgV_Verbindungen.Columns[1].Name = "ÖV Nummer";
@@ -163,24 +163,23 @@ namespace SwissTransportGUI
 
 
                 foreach (Connection connection in connections.ConnectionList)
-                    {
+                {
                     String departureString = connection.From.Departure;
                     DateTime departureDateTime = DateTime.Parse(departureString);
                     String departureFormatted = departureDateTime.ToString("HH:mm:ss dd.MM.yyyy");
-                   // MessageBox.Show(departureDateTime + connection.Duration);
-
-                    String arrivalString = connection.From.Departure;
+                   
+                    String arrivalString = connection.To.Arrival;
                     DateTime arrivalDateTime = DateTime.Parse(arrivalString);
                     String arrivalFormatted = arrivalDateTime.ToString("HH:mm:ss dd.MM.yyyy");
 
-                    
 
 
 
 
-                    string[] row = new string[] {connection.From.Station.Name, connection.To.Station.Name, connection.Duration.ToString(), departureFormatted,arrivalString };
-                        dgV_Verbindungen.Rows.Add(row);
-                    
+
+                    string[] row = new string[] { connection.From.Station.Name, connection.To.Station.Name, connection.Duration.ToString(), departureFormatted, arrivalFormatted };
+                    dgV_Verbindungen.Rows.Add(row);
+
 
 
 
@@ -191,50 +190,43 @@ namespace SwissTransportGUI
                 }
 
             }
-            
-            
 
-            }
 
-            private void btn_searchststation_Click(object sender, EventArgs e)
-            {
-                typeahead(cb_start);
-            }
 
-            private void btn_searchenstation_Click(object sender, EventArgs e)
-            {
-                typeahead(cb_end);
+        }
 
-            }
+        private void btn_searchststation_Click(object sender, EventArgs e)
+        {
+            typeahead(cb_start);
+        }
 
-            private void cb_end_SelectedIndexChanged(object sender, EventArgs e)
-            {
+        private void btn_searchenstation_Click(object sender, EventArgs e)
+        {
+            typeahead(cb_end);
 
-                //if (cb_start.Text.Length > 1) {
-                //    MessageBox.Show(cb_end.Text);
-                //}
-            }
+        }
 
-            private void cb_start_SelectedIndexChanged(object sender, EventArgs e)
-            {
-                //if (cb_start.Text.Length > 2)
-                //{
-                //    MessageBox.Show(cb_start.Text);
-                //}
+        private void cb_end_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-            }
+        }
 
-            private void btn_fahrplan_Click(object sender, EventArgs e)
-            {
+        private void cb_start_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-                var form2 = new Form2();
+        }
 
-                form2.Show();
-            }
+        private void btn_fahrplan_Click(object sender, EventArgs e)
+        {
+
+            var form2 = new Form2();
+
+            form2.Show();
+        }
 
         private void cb_start_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
-    } 
+}

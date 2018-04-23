@@ -32,11 +32,11 @@
             this.cb_fahrtaffelstationauswahl = new System.Windows.Forms.ComboBox();
             this.btn_searchstation = new System.Windows.Forms.Button();
             this.dataGridView_Fahrplan = new System.Windows.Forms.DataGridView();
-            this.btn_calcVerbindungen = new System.Windows.Forms.Button();
             this.öv_kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Öv_Linie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zielort = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_calcVerbindungen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fahrplan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             this.btn_to_Form1.Location = new System.Drawing.Point(652, 415);
             this.btn_to_Form1.Name = "btn_to_Form1";
             this.btn_to_Form1.Size = new System.Drawing.Size(136, 34);
-            this.btn_to_Form1.TabIndex = 0;
+            this.btn_to_Form1.TabIndex = 4;
             this.btn_to_Form1.Text = "Zur Startseite";
             this.btn_to_Form1.UseVisualStyleBackColor = true;
             this.btn_to_Form1.Click += new System.EventHandler(this.btn_to_Form1_Click_1);
@@ -93,16 +93,7 @@
             this.dataGridView_Fahrplan.RowTemplate.Height = 24;
             this.dataGridView_Fahrplan.Size = new System.Drawing.Size(658, 258);
             this.dataGridView_Fahrplan.TabIndex = 3;
-            // 
-            // btn_calcVerbindungen
-            // 
-            this.btn_calcVerbindungen.Location = new System.Drawing.Point(272, 73);
-            this.btn_calcVerbindungen.Name = "btn_calcVerbindungen";
-            this.btn_calcVerbindungen.Size = new System.Drawing.Size(146, 30);
-            this.btn_calcVerbindungen.TabIndex = 4;
-            this.btn_calcVerbindungen.Text = "Verbindungen anzeigen";
-            this.btn_calcVerbindungen.UseVisualStyleBackColor = true;
-            this.btn_calcVerbindungen.Click += new System.EventHandler(this.btn_calcVerbindungen_Click);
+            this.dataGridView_Fahrplan.TabStop = false;
             // 
             // öv_kategorie
             // 
@@ -131,6 +122,16 @@
             this.Zielort.Name = "Zielort";
             this.Zielort.ReadOnly = true;
             this.Zielort.Width = 77;
+            // 
+            // btn_calcVerbindungen
+            // 
+            this.btn_calcVerbindungen.Location = new System.Drawing.Point(272, 73);
+            this.btn_calcVerbindungen.Name = "btn_calcVerbindungen";
+            this.btn_calcVerbindungen.Size = new System.Drawing.Size(146, 30);
+            this.btn_calcVerbindungen.TabIndex = 3;
+            this.btn_calcVerbindungen.Text = "Verbindungen anzeigen";
+            this.btn_calcVerbindungen.UseVisualStyleBackColor = true;
+            this.btn_calcVerbindungen.Click += new System.EventHandler(this.btn_calcVerbindungen_Click);
             // 
             // Form2
             // 
