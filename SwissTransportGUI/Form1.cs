@@ -122,7 +122,7 @@ namespace SwissTransportGUI
         //Cleart die Combobox
         public void clearcb(ComboBox box)
         {
-            box.Text = "";
+            box.Text = " ";
         }
 
         private void btn_close_Click(object sender, EventArgs e)
