@@ -151,6 +151,7 @@ namespace SwissTransportGUI
                     {
                         idendstation = station.Id;
                         endstationname = station.Name;
+                        
                     }
 
                 }

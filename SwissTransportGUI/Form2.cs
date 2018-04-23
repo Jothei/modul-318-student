@@ -84,7 +84,7 @@ namespace SwissTransportGUI
         private void btn_searchstation_Click(object sender, EventArgs e)
         {
 
-            myForm.typeahead(cb_fahrtaffelstationauswahl);
+            myForm.typeahead(cb_fahrtafelstationauswahl);
         }
 
         private void btn_to_Form1_Click_1(object sender, EventArgs e)
@@ -95,22 +95,28 @@ namespace SwissTransportGUI
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
         {
             checkifverbindungwaspressed = true;
-            if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text))
+            if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
             {
+                string xcord;
+
+              
                 dataGridView_Fahrplan.Rows.Clear();
                 dataGridView_Fahrplan.Refresh();
-                station = cb_fahrtaffelstationauswahl.Text;
-
+                station = cb_fahrtafelstationauswahl.Text;
+                string xcoordinaten = "";
               
 
                 String övgesellschaft = "";
+                
 
+                MessageBox.Show(xcoordinaten);
                 StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
                 foreach (var entry in stationBoard.Entries)
                 {
+                    
 
 
-                    övgesellschaft += entry.Operator + "\n";
+                        övgesellschaft += entry.Operator + "\n";
                     DateTime departureString = entry.Stop.Departure;
                     DateTime departureDateTime = (departureString);
                     String departureFormatted = departureDateTime.ToString("HH:mm:ss");
@@ -143,7 +149,7 @@ namespace SwissTransportGUI
         private void btn_to_google_maps_Click(object sender, EventArgs e)
         {
 
-            if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text))
+            if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
             {
              
                    
@@ -167,7 +173,7 @@ namespace SwissTransportGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(cb_fahrtaffelstationauswahl.Text) && !string.IsNullOrEmpty(txt_Emailadresse.Text))
+            if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text) && !string.IsNullOrEmpty(txt_Emailadresse.Text))
             {
                 sending_email("jonithe@hotmail.ch", _bodycontentformail);
             }

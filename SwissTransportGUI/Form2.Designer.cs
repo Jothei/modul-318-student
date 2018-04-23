@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_to_Form1 = new System.Windows.Forms.Button();
-            this.cb_fahrtaffelstationauswahl = new System.Windows.Forms.ComboBox();
+            this.cb_fahrtafelstationauswahl = new System.Windows.Forms.ComboBox();
             this.btn_searchstation = new System.Windows.Forms.Button();
             this.dataGridView_Fahrplan = new System.Windows.Forms.DataGridView();
             this.öv_kategorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,16 +56,16 @@
             this.btn_to_Form1.UseVisualStyleBackColor = true;
             this.btn_to_Form1.Click += new System.EventHandler(this.btn_to_Form1_Click_1);
             // 
-            // cb_fahrtaffelstationauswahl
+            // cb_fahrtafelstationauswahl
             // 
-            this.cb_fahrtaffelstationauswahl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cb_fahrtafelstationauswahl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_fahrtaffelstationauswahl.FormattingEnabled = true;
-            this.cb_fahrtaffelstationauswahl.Location = new System.Drawing.Point(179, 42);
-            this.cb_fahrtaffelstationauswahl.Name = "cb_fahrtaffelstationauswahl";
-            this.cb_fahrtaffelstationauswahl.Size = new System.Drawing.Size(486, 24);
-            this.cb_fahrtaffelstationauswahl.TabIndex = 1;
+            this.cb_fahrtafelstationauswahl.FormattingEnabled = true;
+            this.cb_fahrtafelstationauswahl.Location = new System.Drawing.Point(179, 42);
+            this.cb_fahrtafelstationauswahl.Name = "cb_fahrtafelstationauswahl";
+            this.cb_fahrtafelstationauswahl.Size = new System.Drawing.Size(486, 24);
+            this.cb_fahrtafelstationauswahl.TabIndex = 1;
             // 
             // btn_searchstation
             // 
@@ -130,7 +130,7 @@
             // 
             // btn_calcVerbindungen
             // 
-            this.btn_calcVerbindungen.Location = new System.Drawing.Point(192, 72);
+            this.btn_calcVerbindungen.Location = new System.Drawing.Point(314, 72);
             this.btn_calcVerbindungen.Name = "btn_calcVerbindungen";
             this.btn_calcVerbindungen.Size = new System.Drawing.Size(146, 30);
             this.btn_calcVerbindungen.TabIndex = 3;
@@ -197,7 +197,7 @@
             this.Controls.Add(this.btn_calcVerbindungen);
             this.Controls.Add(this.dataGridView_Fahrplan);
             this.Controls.Add(this.btn_searchstation);
-            this.Controls.Add(this.cb_fahrtaffelstationauswahl);
+            this.Controls.Add(this.cb_fahrtafelstationauswahl);
             this.Controls.Add(this.btn_to_Form1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -214,7 +214,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_to_Form1;
-        private System.Windows.Forms.ComboBox cb_fahrtaffelstationauswahl;
+        private System.Windows.Forms.ComboBox cb_fahrtafelstationauswahl;
         private System.Windows.Forms.Button btn_searchstation;
         private System.Windows.Forms.DataGridView dataGridView_Fahrplan;
         private System.Windows.Forms.Button btn_calcVerbindungen;
