@@ -95,6 +95,7 @@ namespace SwissTransportGUI
 
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
         {
+       
             checkifverbindungwaspressed = true;
             if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
             {
@@ -109,12 +110,12 @@ namespace SwissTransportGUI
 
                 String övgesellschaft = "";
 
-
+                double xcord;
                 StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
                 foreach (var entry in stationBoard.Entries)
                 {
 
-
+                   
 
                     övgesellschaft += entry.Operator + "\n";
                     DateTime departureString = entry.Stop.Departure;
@@ -139,6 +140,8 @@ namespace SwissTransportGUI
 
 
             }
+            
+            
             else
             {
                 MessageBox.Show("Bitte geben Sie eine gültige Station ein");

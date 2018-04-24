@@ -45,7 +45,7 @@ namespace SwissTransport
             var request = CreateWebRequest(url);
             var response = request.GetResponse();
             var responseStream = response.GetResponseStream();
-
+           
             if (responseStream != null)
             {
                 var readToEnd = new StreamReader(responseStream).ReadToEnd();

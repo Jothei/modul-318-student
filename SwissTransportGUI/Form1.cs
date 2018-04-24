@@ -115,7 +115,7 @@ namespace SwissTransportGUI
         public Mainform()
         {
             InitializeComponent();
-
+          
         }
         
 
@@ -143,7 +143,7 @@ namespace SwissTransportGUI
             else
             {
 
-
+                double xcord;
 
 
                 foreach (var station in myStations.StationList)
@@ -152,7 +152,7 @@ namespace SwissTransportGUI
                     {
                         idendstation = station.Id;
                         endstationname = station.Name;
-
+                      
                     }
 
                 }
