@@ -209,7 +209,7 @@ namespace SwissTransportGUI
 
                     string xcord =   stationBoard.Station.Coordinate.XCoordinate.ToString();
                     string ycord = stationBoard.Station.Coordinate.YCoordinate.ToString();
-                    MessageBox.Show(xcord + " " + ycord);
+                   
                     if (xcord != null || ycord != null)
                     {
                       xcord= coordinateformatter(xcord);
