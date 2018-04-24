@@ -51,7 +51,7 @@
             this.btn_to_Form1.Location = new System.Drawing.Point(770, 651);
             this.btn_to_Form1.Name = "btn_to_Form1";
             this.btn_to_Form1.Size = new System.Drawing.Size(136, 34);
-            this.btn_to_Form1.TabIndex = 4;
+            this.btn_to_Form1.TabIndex = 10;
             this.btn_to_Form1.Text = "Zur Startseite";
             this.btn_to_Form1.UseVisualStyleBackColor = true;
             this.btn_to_Form1.Click += new System.EventHandler(this.btn_to_Form1_Click_1);

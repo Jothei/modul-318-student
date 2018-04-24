@@ -134,7 +134,7 @@ namespace SwissTransportGUI
                         DateTime departureString = entry.Stop.Departure;
                         DateTime departureDateTime = (departureString);
                         String departureFormatted = departureDateTime.ToString("HH:mm:ss");
-                       
+                    
 
                         dataGridView_Fahrplan.ColumnCount = 4;
                         dataGridView_Fahrplan.Columns[0].Name = "ÖV Kategorie";

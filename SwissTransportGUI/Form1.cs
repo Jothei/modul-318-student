@@ -264,7 +264,11 @@ namespace SwissTransportGUI
                 string start = cb_start.Text;
                 string end = cb_end.Text;
                 cb_start.Text = end;
+                
                 cb_end.Text = start;
+
+                typeahead(cb_start);
+                typeahead(cb_end);
             }
         }
 
