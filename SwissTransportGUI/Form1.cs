@@ -27,7 +27,11 @@ namespace SwissTransportGUI
         ITransport myIEtransport = new Transport();
         Connection myConnection = new Connection();
         ConnectionPoint myConnectionPoint = new ConnectionPoint();
-       
+
+        //Errormeldung für Internet Timeout
+        public void errorfürinternettimeout(){
+            MessageBox.Show("Internet Timeout");
+            }
         private void clearcb()
         {
             cb_end.Text = "";
