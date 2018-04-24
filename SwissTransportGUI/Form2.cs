@@ -31,7 +31,8 @@ namespace SwissTransportGUI
             InitializeComponent();
         }
 
-        private string coordinateformatter(string convertstring){
+        private string coordinateformatter(string convertstring)
+        {
             String myString = convertstring;
             myString = myString.Replace(",", ".");
             return myString;
@@ -123,8 +124,8 @@ namespace SwissTransportGUI
 
 
                     StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
-                  
-                   
+
+
                     foreach (var entry in stationBoard.Entries)
                     {
 
@@ -134,7 +135,7 @@ namespace SwissTransportGUI
                         DateTime departureString = entry.Stop.Departure;
                         DateTime departureDateTime = (departureString);
                         String departureFormatted = departureDateTime.ToString("HH:mm:ss");
-                    
+
 
                         dataGridView_Fahrplan.ColumnCount = 4;
                         dataGridView_Fahrplan.Columns[0].Name = "ÖV Kategorie";
@@ -203,18 +204,19 @@ namespace SwissTransportGUI
         {
             try
             {
-                if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text) ){
-                    
+                if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
+                {
+
                     StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
 
-                    string xcord =   stationBoard.Station.Coordinate.XCoordinate.ToString();
+                    string xcord = stationBoard.Station.Coordinate.XCoordinate.ToString();
                     string ycord = stationBoard.Station.Coordinate.YCoordinate.ToString();
-                   
+
                     if (xcord != null || ycord != null)
                     {
-                      xcord= coordinateformatter(xcord);
-                      ycord = coordinateformatter(ycord);
-                        gotoSite("https://www.google.com/maps/place/"+xcord.ToString()+","+ycord.ToString());
+                        xcord = coordinateformatter(xcord);
+                        ycord = coordinateformatter(ycord);
+                        gotoSite("https://www.google.com/maps/place/" + xcord.ToString() + "," + ycord.ToString());
                     }
                     else
                     {
@@ -227,13 +229,13 @@ namespace SwissTransportGUI
 
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Error", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
     }
-    
+
 }
 
