@@ -59,9 +59,9 @@
             this.lbl_Startposition.AutoSize = true;
             this.lbl_Startposition.Location = new System.Drawing.Point(118, 16);
             this.lbl_Startposition.Name = "lbl_Startposition";
-            this.lbl_Startposition.Size = new System.Drawing.Size(235, 17);
+            this.lbl_Startposition.Size = new System.Drawing.Size(231, 17);
             this.lbl_Startposition.TabIndex = 2;
-            this.lbl_Startposition.Text = "Bitte geben Sie Ihre Startstation ein:";
+            this.lbl_Startposition.Text = "Bitte geben Sie Ihre Startstation ein";
             // 
             // lbl_Endstation
             // 
@@ -232,7 +232,7 @@
             this.btn_change_destinations.Name = "btn_change_destinations";
             this.btn_change_destinations.Size = new System.Drawing.Size(81, 75);
             this.btn_change_destinations.TabIndex = 9;
-            this.btn_change_destinations.Text = "▲▼";
+            this.btn_change_destinations.Text = "▼▲";
             this.btn_change_destinations.UseVisualStyleBackColor = true;
             this.btn_change_destinations.Click += new System.EventHandler(this.btn_change_destinations_Click);
             // 
@@ -274,7 +274,6 @@
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transport App";
-//            this.Load += new System.EventHandler(this.Mainform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Verbindungen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

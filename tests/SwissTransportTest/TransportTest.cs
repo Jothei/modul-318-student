@@ -15,6 +15,16 @@ namespace SwissTransport
 
             Assert.AreEqual(10, stations.StationList.Count);
         }
+      
+
+        [TestMethod]
+        public void searchLuzern()
+        {
+            testee = new Transport();
+            var stations = testee.GetStations("Luzern,");
+           
+            Assert.IsNotNull(stations);
+        }
         [TestMethod]
         public void Meggenfinden()
         {
@@ -49,5 +59,7 @@ namespace SwissTransport
 
             Assert.IsNotNull(connections);
         }
+
+       
     }
 }
