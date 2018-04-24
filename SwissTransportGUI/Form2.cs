@@ -157,7 +157,7 @@ namespace SwissTransportGUI
 
                 else
                 {
-                    MessageBox.Show("Bitte geben Sie eine gültige Station ein");
+                    MessageBox.Show("Bitte geben Sie eine gültige ÖV Station ein");
                 }
             }
             catch (Exception)
