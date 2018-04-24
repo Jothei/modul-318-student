@@ -274,6 +274,7 @@
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transport App";
+//            this.Load += new System.EventHandler(this.Mainform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgV_Verbindungen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

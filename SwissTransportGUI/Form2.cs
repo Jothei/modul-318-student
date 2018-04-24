@@ -95,56 +95,62 @@ namespace SwissTransportGUI
 
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
         {
-       
-            checkifverbindungwaspressed = true;
-            if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
+            try
             {
-
-
-
-                dataGridView_Fahrplan.Rows.Clear();
-                dataGridView_Fahrplan.Refresh();
-                station = cb_fahrtafelstationauswahl.Text;
-
-
-
-                String övgesellschaft = "";
-
-                double xcord;
-                StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
-                foreach (var entry in stationBoard.Entries)
+                checkifverbindungwaspressed = true;
+                if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text))
                 {
 
-                   
-
-                    övgesellschaft += entry.Operator + "\n";
-                    DateTime departureString = entry.Stop.Departure;
-                    DateTime departureDateTime = (departureString);
-                    String departureFormatted = departureDateTime.ToString("HH:mm:ss");
 
 
-                    dataGridView_Fahrplan.ColumnCount = 4;
-                    dataGridView_Fahrplan.Columns[0].Name = "ÖV Kategorie";
-                    dataGridView_Fahrplan.Columns[1].Name = "ÖV Nummer";
-                    dataGridView_Fahrplan.Columns[2].Name = "Abfahrt";
-                    dataGridView_Fahrplan.Columns[3].Name = "Zielstation";
-
-                    string[] row = new string[] { entry.Category, entry.Number, departureFormatted, entry.To };
-                    dataGridView_Fahrplan.Rows.Add(row);
+                    dataGridView_Fahrplan.Rows.Clear();
+                    dataGridView_Fahrplan.Refresh();
+                    station = cb_fahrtafelstationauswahl.Text;
 
 
-                    _bodycontentformail += "ÖV Kategorie: " + entry.Category + " ÖV Nummer: " + entry.Number + " Abfahrt: " + departureFormatted + " Zielstation: " + entry.To + "\n\n";
+
+                    String övgesellschaft = "";
+
+                    double xcord;
+                    StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
+                    foreach (var entry in stationBoard.Entries)
+                    {
+
+
+
+                        övgesellschaft += entry.Operator + "\n";
+                        DateTime departureString = entry.Stop.Departure;
+                        DateTime departureDateTime = (departureString);
+                        String departureFormatted = departureDateTime.ToString("HH:mm:ss");
+
+
+                        dataGridView_Fahrplan.ColumnCount = 4;
+                        dataGridView_Fahrplan.Columns[0].Name = "ÖV Kategorie";
+                        dataGridView_Fahrplan.Columns[1].Name = "ÖV Nummer";
+                        dataGridView_Fahrplan.Columns[2].Name = "Abfahrt";
+                        dataGridView_Fahrplan.Columns[3].Name = "Zielstation";
+
+                        string[] row = new string[] { entry.Category, entry.Number, departureFormatted, entry.To };
+                        dataGridView_Fahrplan.Rows.Add(row);
+
+
+                        _bodycontentformail += "ÖV Kategorie: " + entry.Category + " ÖV Nummer: " + entry.Number + " Abfahrt: " + departureFormatted + " Zielstation: " + entry.To + "\n\n";
+
+
+                    }
 
 
                 }
 
-
+                else
+                {
+                    MessageBox.Show("Bitte geben Sie eine gültige Station ein");
+                }
             }
-            
-            
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Bitte geben Sie eine gültige Station ein");
+                MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
         }
