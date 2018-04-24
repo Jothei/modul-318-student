@@ -6,6 +6,7 @@ namespace SwissTransport
     public class TransportTest
     {
         private ITransport testee;
+      
 
         [TestMethod]
         public void Locations()
@@ -51,6 +52,7 @@ namespace SwissTransport
 
             Assert.IsNotNull(connections);
         }
+        
         [TestMethod]
         public void Meggenluconncetion()
         {
