@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 using SwissTransport;
 using System.Net.Mail;
 
@@ -30,7 +31,12 @@ namespace SwissTransportGUI
             InitializeComponent();
         }
 
-        public void sending_email(string email, string content)
+        private string coordinateformatter(string convertstring){
+            String myString = convertstring;
+            myString = myString.Replace(",", ".");
+            return myString;
+        }
+        private void sending_email(string email, string content)
         {
             if (checkifverbindungwaspressed == true)
             {
@@ -68,6 +74,7 @@ namespace SwissTransportGUI
             }
 
         }
+        //Stellt eine Verbindung zum Browser her
         public void gotoSite(string url)
         {
             System.Diagnostics.Process.Start(url);
@@ -91,6 +98,9 @@ namespace SwissTransportGUI
         private void btn_to_Form1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+            Mainform myMainform = new Mainform();
+            myMainform.Focus();
+
         }
 
         private void btn_calcVerbindungen_Click(object sender, EventArgs e)
@@ -111,8 +121,10 @@ namespace SwissTransportGUI
 
                     String övgesellschaft = "";
 
-                    double xcord;
+
                     StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
+                  
+                   
                     foreach (var entry in stationBoard.Entries)
                     {
 
@@ -122,7 +134,7 @@ namespace SwissTransportGUI
                         DateTime departureString = entry.Stop.Departure;
                         DateTime departureDateTime = (departureString);
                         String departureFormatted = departureDateTime.ToString("HH:mm:ss");
-
+                       
 
                         dataGridView_Fahrplan.ColumnCount = 4;
                         dataGridView_Fahrplan.Columns[0].Name = "ÖV Kategorie";
@@ -147,7 +159,7 @@ namespace SwissTransportGUI
                     MessageBox.Show("Bitte geben Sie eine gültige Station ein");
                 }
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Bitte geben Sie überall einen gültigen Wert ein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -155,8 +167,8 @@ namespace SwissTransportGUI
 
         }
 
-       
-       
+
+
 
         private void btn_to_email_Click(object sender, EventArgs e)
         {
@@ -186,6 +198,42 @@ namespace SwissTransportGUI
             get { return _bodycontentformail; }
             set { _bodycontentformail = value; }
         }
+
+        private void btn_to_google_maps_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(cb_fahrtafelstationauswahl.Text) ){
+                    
+                    StationBoardRoot stationBoard = myTransport.GetStationBoard(station, "");
+
+                    string xcord =   stationBoard.Station.Coordinate.XCoordinate.ToString();
+                    string ycord = stationBoard.Station.Coordinate.YCoordinate.ToString();
+                    MessageBox.Show(xcord + " " + ycord);
+                    if (xcord != null || ycord != null)
+                    {
+                      xcord= coordinateformatter(xcord);
+                      ycord = coordinateformatter(ycord);
+                        gotoSite("https://www.google.com/maps/place/"+xcord.ToString()+","+ycord.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Station nicht gefunden.\nBitte überprüfen Sie ob die richtige Station eingegeben wurde", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Error", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
     }
+    
 }
 

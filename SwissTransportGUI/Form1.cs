@@ -27,7 +27,7 @@ namespace SwissTransportGUI
         ITransport myIEtransport = new Transport();
         Connection myConnection = new Connection();
         ConnectionPoint myConnectionPoint = new ConnectionPoint();
-        //Transport tr = new Transport();
+       
         private void clearcb()
         {
             cb_end.Text = "";
@@ -143,7 +143,7 @@ namespace SwissTransportGUI
             else
             {
 
-                double xcord;
+               
 
 
                 foreach (var station in myStations.StationList)

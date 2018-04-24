@@ -149,7 +149,7 @@
             this.btn_to_google_maps.TabIndex = 5;
             this.btn_to_google_maps.Text = "Station auf Google Maps anzeigen";
             this.btn_to_google_maps.UseVisualStyleBackColor = true;
-//            this.btn_to_google_maps.Click += new System.EventHandler(this.btn_to_google_maps_Click);
+            this.btn_to_google_maps.Click += new System.EventHandler(this.btn_to_google_maps_Click);
             // 
             // label1
             // 
